@@ -1,0 +1,1001 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="../favicon.ico"><title>Código completo · SeisAssist</title><style>body{font:16px/1.6 system-ui;margin:2rem;color:#0F2F3F}h1{font-size:28px}summary{font-weight:700;padding:1rem;background:#E2F2F0}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#F2F4F6;padding:1rem;font:14px/1.5 monospace}details{margin:2rem 0}</style></head><body><h1>Código completo corregido</h1><p>Cada bloque reproduce un archivo íntegro. Copia todo su contenido en la ruta indicada. Los recursos binarios y SVG se suministran en el ZIP.</p><details open><summary>pages/index.html · archivo completo</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;es&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+  &lt;meta name=&quot;description&quot; content=&quot;SeisAssist: preparación inclusiva ante sismos. Explora los recorridos locales de una persona que necesita ayuda, una brigada y su red de apoyo.&quot;&gt;
+  &lt;meta name=&quot;theme-color&quot; content=&quot;#0F2F3F&quot;&gt;
+  &lt;title&gt;SeisAssist · Preparación, respuesta y cuidado&lt;/title&gt;
+  &lt;link rel=&quot;icon&quot; href=&quot;../favicon.ico&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;../css/styles.css&quot;&gt;
+  &lt;script src=&quot;../js/main.js&quot; defer&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;a class=&quot;skip-link&quot; href=&quot;#contenido&quot;&gt;Saltar al contenido&lt;/a&gt;
+  &lt;div id=&quot;live&quot; class=&quot;sr-only&quot; role=&quot;status&quot; aria-atomic=&quot;true&quot;&gt;&lt;/div&gt;
+  &lt;header class=&quot;site-header&quot;&gt;
+    &lt;div class=&quot;container header-inner&quot;&gt;
+      &lt;a class=&quot;brand&quot; href=&quot;#inicio&quot;&gt;&lt;img src=&quot;../assets/icons/logo-seisassist.svg&quot; width=&quot;32&quot; height=&quot;32&quot; alt=&quot;&quot;&gt;&lt;span&gt;SeisAssist&lt;/span&gt;&lt;/a&gt;
+      &lt;button id=&quot;menu-toggle&quot; class=&quot;menu-toggle&quot; type=&quot;button&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;nav-menu&quot;&gt;Abrir menú&lt;/button&gt;
+      &lt;nav id=&quot;nav-menu&quot; aria-label=&quot;Navegación principal&quot;&gt;
+        &lt;a href=&quot;#inicio&quot; aria-current=&quot;location&quot;&gt;Inicio&lt;/a&gt;&lt;a href=&quot;#ecosistema&quot;&gt;Cómo funciona&lt;/a&gt;&lt;a href=&quot;#plataforma&quot;&gt;Explorar SeisAssist&lt;/a&gt;&lt;a href=&quot;#accesibilidad&quot;&gt;Accesibilidad&lt;/a&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+  &lt;main id=&quot;contenido&quot; tabindex=&quot;-1&quot;&gt;
+    &lt;section id=&quot;inicio&quot; class=&quot;hero&quot; aria-labelledby=&quot;hero-title&quot;&gt;
+      &lt;div class=&quot;container hero-grid&quot;&gt;
+        &lt;div&gt;
+          &lt;p class=&quot;eyebrow&quot;&gt;PREPARACIÓN · RESPUESTA · CUIDADO&lt;/p&gt;
+          &lt;h1 id=&quot;hero-title&quot;&gt;Conexión que protege, incluso sin internet.&lt;/h1&gt;
+          &lt;p&gt;Prepara información de emergencia, conoce el recorrido SOS y acompaña a quienes requieren asistencia durante un sismo.&lt;/p&gt;
+          &lt;p class=&quot;muted&quot;&gt;SeisAssist propone conectar a personas con discapacidad o vulnerabilidad médica, brigadistas y redes de apoyo cuando las telecomunicaciones fallan.&lt;/p&gt;
+          &lt;div class=&quot;actions&quot;&gt;&lt;a href=&quot;#plataforma&quot; class=&quot;button primary&quot; data-role-jump=&quot;persona&quot;&gt;Explorar Modo Crisis&lt;/a&gt;&lt;a href=&quot;#ecosistema&quot; class=&quot;button secondary&quot;&gt;Conocer los tres roles&lt;/a&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;figure&gt;&lt;img src=&quot;../assets/images/ecosistema-seisassist.svg&quot; width=&quot;640&quot; height=&quot;420&quot; alt=&quot;Tres roles conectados: la persona activa el SOS, la brigada consulta y confirma, y el cuidador prepara el perfil.&quot;&gt;&lt;figcaption&gt;Concepto de comunicación local. En esta versión, los recorridos se conectan dentro del mismo navegador.&lt;/figcaption&gt;&lt;/figure&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section id=&quot;ecosistema&quot; class=&quot;section&quot; aria-labelledby=&quot;ecosistema-title&quot;&gt;
+      &lt;div class=&quot;container&quot;&gt;
+        &lt;h2 id=&quot;ecosistema-title&quot;&gt;Una red de cuidado, tres maneras de participar&lt;/h2&gt;
+        &lt;div class=&quot;three-grid&quot;&gt;
+          &lt;article class=&quot;card&quot;&gt;&lt;img class=&quot;icon&quot; src=&quot;../assets/icons/sos.svg&quot; alt=&quot;&quot;&gt;&lt;h3&gt;Persona que necesita asistencia&lt;/h3&gt;&lt;p&gt;Prepara tu información, activa el SOS de prueba y distingue una emisión de una recepción confirmada.&lt;/p&gt;&lt;button type=&quot;button&quot; class=&quot;button secondary&quot; data-role-jump=&quot;persona&quot;&gt;Explorar mi espacio&lt;/button&gt;&lt;/article&gt;
+          &lt;article class=&quot;card&quot;&gt;&lt;img class=&quot;icon&quot; src=&quot;../assets/icons/radar.svg&quot; alt=&quot;&quot;&gt;&lt;h3&gt;Brigadistas y equipos de rescate&lt;/h3&gt;&lt;p&gt;Revisa alertas, consulta los datos autorizados y registra recepción, prioridad y atención en el escenario de prueba.&lt;/p&gt;&lt;button type=&quot;button&quot; class=&quot;button secondary&quot; data-role-jump=&quot;rescate&quot;&gt;Explorar panel de rescate&lt;/button&gt;&lt;/article&gt;
+          &lt;article class=&quot;card&quot;&gt;&lt;img class=&quot;icon&quot; src=&quot;../assets/icons/medical.svg&quot; alt=&quot;&quot;&gt;&lt;h3&gt;Familiares y redes de apoyo&lt;/h3&gt;&lt;p&gt;Registra un perfil ficticio, decide qué información compartir y consulta su última versión local.&lt;/p&gt;&lt;button type=&quot;button&quot; class=&quot;button secondary&quot; data-role-jump=&quot;cuidador&quot;&gt;Explorar cuidado familiar&lt;/button&gt;&lt;/article&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section id=&quot;plataforma&quot; class=&quot;section&quot; aria-labelledby=&quot;plataforma-title&quot;&gt;
+      &lt;div class=&quot;container&quot;&gt;
+        &lt;h2 id=&quot;plataforma-title&quot;&gt;Explora SeisAssist&lt;/h2&gt;
+        &lt;p class=&quot;notice&quot;&gt;&lt;img class=&quot;icon&quot; src=&quot;../assets/icons/alert.svg&quot; alt=&quot;&quot;&gt;&lt;span&gt;&lt;strong&gt;Demostración académica: utiliza datos ficticios.&lt;/strong&gt; El SOS y el acuse funcionan como estados de prueba en este navegador. No transmiten Bluetooth Mesh, no detectan personas ni envían ayuda real.&lt;/span&gt;&lt;/p&gt;
+        &lt;p id=&quot;connection-status&quot; class=&quot;small&quot; role=&quot;status&quot;&gt;Preparando la copia local…&lt;/p&gt;
+        &lt;p id=&quot;storage-warning&quot; class=&quot;notice error&quot; role=&quot;alert&quot; hidden&gt;&lt;/p&gt;
+        &lt;p id=&quot;tab-conflict&quot; class=&quot;notice warning&quot; role=&quot;alert&quot; hidden&gt;Otra pestaña cambió los datos. Recarga esta página antes de guardar. Conserva una copia de tus cambios pendientes.&lt;/p&gt;
+        &lt;noscript&gt;&lt;p class=&quot;notice warning&quot;&gt;Activa JavaScript para utilizar los tres recorridos. La información de esta landing sigue disponible.&lt;/p&gt;&lt;/noscript&gt;
+        &lt;div class=&quot;app-shell&quot;&gt;
+          &lt;div class=&quot;role-tabs&quot; role=&quot;tablist&quot; aria-label=&quot;Seleccionar rol&quot;&gt;
+            &lt;button id=&quot;tab-persona&quot; role=&quot;tab&quot; type=&quot;button&quot; aria-selected=&quot;true&quot; aria-controls=&quot;panel-persona&quot; tabindex=&quot;0&quot;&gt;Mi espacio SOS&lt;/button&gt;
+            &lt;button id=&quot;tab-rescate&quot; role=&quot;tab&quot; type=&quot;button&quot; aria-selected=&quot;false&quot; aria-controls=&quot;panel-rescate&quot; tabindex=&quot;-1&quot;&gt;Equipo de rescate&lt;/button&gt;
+            &lt;button id=&quot;tab-cuidador&quot; role=&quot;tab&quot; type=&quot;button&quot; aria-selected=&quot;false&quot; aria-controls=&quot;panel-cuidador&quot; tabindex=&quot;-1&quot;&gt;Cuidador o familiar&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;panels&quot;&gt;
+            &lt;div id=&quot;panel-persona&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tab-persona&quot; tabindex=&quot;0&quot;&gt;
+              &lt;div class=&quot;two-grid&quot;&gt;
+                &lt;article class=&quot;card crisis-card&quot;&gt;
+                  &lt;h3&gt;Modo Crisis · Pide ayuda&lt;/h3&gt;
+                  &lt;p&gt;Un control amplio para activar la alerta de prueba.&lt;/p&gt;
+                  &lt;button id=&quot;sos-activate&quot; type=&quot;button&quot; class=&quot;sos-button&quot; aria-describedby=&quot;sos-help&quot;&gt;&lt;img class=&quot;icon&quot; src=&quot;../assets/icons/sos.svg&quot; alt=&quot;&quot;&gt;&lt;strong&gt;SOS&lt;/strong&gt;&lt;span id=&quot;sos-button-label&quot;&gt;Activar SOS de prueba&lt;/span&gt;&lt;/button&gt;
+                  &lt;p id=&quot;sos-help&quot; class=&quot;small&quot;&gt;El acuse solo aparece cuando lo confirma el rol Rescatista. Repetir la activación no crea otra alerta.&lt;/p&gt;
+                  &lt;div id=&quot;sos-status&quot; class=&quot;notice&quot; role=&quot;status&quot; aria-atomic=&quot;true&quot;&gt;&lt;/div&gt;
+                  &lt;button id=&quot;sos-retry&quot; type=&quot;button&quot; class=&quot;button primary&quot; hidden&gt;Reintentar emisión&lt;/button&gt;
+                  &lt;details&gt;&lt;summary&gt;Preparar una prueba de fallo&lt;/summary&gt;&lt;label for=&quot;fail-emission&quot; class=&quot;check&quot;&gt;&lt;input id=&quot;fail-emission&quot; type=&quot;checkbox&quot;&gt;Provocar un fallo local en el siguiente intento&lt;/label&gt;&lt;p class=&quot;small&quot;&gt;El reintento utiliza el mismo paquete de datos. La retirada de consentimiento siempre elimina los datos médicos.&lt;/p&gt;&lt;/details&gt;
+                &lt;/article&gt;
+                &lt;div class=&quot;stack&quot;&gt;
+                  &lt;article class=&quot;card&quot;&gt;&lt;h3&gt;Preparación del Modo Crisis&lt;/h3&gt;&lt;p id=&quot;readiness&quot; class=&quot;chip&quot;&gt;&lt;/p&gt;&lt;ul id=&quot;diagnostic&quot; class=&quot;clean-list&quot;&gt;&lt;/ul&gt;&lt;p class=&quot;small&quot;&gt;Comprueba datos locales, no cobertura de rescate. Compartir información médica es opcional.&lt;/p&gt;&lt;/article&gt;
+                  &lt;article class=&quot;card&quot;&gt;&lt;h3&gt;Última ubicación registrada&lt;/h3&gt;&lt;p class=&quot;small&quot;&gt;Captura histórica, sin seguimiento en tiempo real. Los ejemplos se identifican expresamente.&lt;/p&gt;&lt;dl id=&quot;location-data&quot;&gt;&lt;/dl&gt;&lt;button id=&quot;update-location&quot; type=&quot;button&quot; class=&quot;button secondary&quot;&gt;Actualizar ubicación con GPS&lt;/button&gt;&lt;p id=&quot;location-feedback&quot; role=&quot;status&quot;&gt;&lt;/p&gt;&lt;details&gt;&lt;summary&gt;Opciones de prueba de ubicación&lt;/summary&gt;&lt;label for=&quot;fail-location&quot; class=&quot;check&quot;&gt;&lt;input id=&quot;fail-location&quot; type=&quot;checkbox&quot;&gt;Simular fallo sin solicitar GPS&lt;/label&gt;&lt;button id=&quot;example-location&quot; type=&quot;button&quot; class=&quot;button secondary&quot;&gt;Usar coordenadas de ejemplo&lt;/button&gt;&lt;/details&gt;&lt;/article&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;two-grid&quot;&gt;
+                &lt;article class=&quot;card&quot;&gt;&lt;h3&gt;Comando SOS&lt;/h3&gt;&lt;p&gt;Prueba por texto de la frase que reconocería el sistema de voz. Esta versión no captura audio.&lt;/p&gt;&lt;form id=&quot;voice-form&quot; novalidate&gt;&lt;label for=&quot;voice-phrase&quot;&gt;Frase configurada (1 a 80 caracteres)&lt;/label&gt;&lt;input id=&quot;voice-phrase&quot; maxlength=&quot;80&quot; required aria-describedby=&quot;voice-feedback&quot;&gt;&lt;button class=&quot;button secondary&quot; type=&quot;submit&quot;&gt;Guardar frase&lt;/button&gt;&lt;/form&gt;&lt;label for=&quot;voice-test&quot;&gt;Transcripción de prueba&lt;/label&gt;&lt;input id=&quot;voice-test&quot; maxlength=&quot;80&quot; aria-describedby=&quot;voice-feedback&quot;&gt;&lt;button id=&quot;test-voice&quot; class=&quot;button primary&quot; type=&quot;button&quot;&gt;Probar comando&lt;/button&gt;&lt;p id=&quot;voice-feedback&quot; role=&quot;status&quot;&gt;&lt;/p&gt;&lt;/article&gt;
+                &lt;article class=&quot;card&quot;&gt;&lt;h3&gt;Mi información de emergencia&lt;/h3&gt;&lt;p class=&quot;small&quot;&gt;Consulta local disponible sin solicitar datos a una nube.&lt;/p&gt;&lt;details open&gt;&lt;summary&gt;Consultar perfil local&lt;/summary&gt;&lt;div id=&quot;persona-profile&quot;&gt;&lt;/div&gt;&lt;/details&gt;&lt;button class=&quot;button secondary&quot; type=&quot;button&quot; data-role-jump=&quot;cuidador&quot;&gt;Registrar o editar perfil&lt;/button&gt;&lt;/article&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id=&quot;panel-rescate&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tab-rescate&quot; tabindex=&quot;0&quot; hidden&gt;
+              &lt;article class=&quot;card&quot;&gt;&lt;h3&gt;Panel táctico de demostración&lt;/h3&gt;&lt;p&gt;Responsable de prueba: &lt;strong&gt;Brigadista Demo · B-12&lt;/strong&gt;. Cambiar de rol no autentica a una persona.&lt;/p&gt;&lt;div id=&quot;filters&quot; class=&quot;actions&quot; role=&quot;group&quot; aria-label=&quot;Filtrar por estado de atención&quot;&gt;&lt;button class=&quot;button secondary&quot; type=&quot;button&quot; data-filter=&quot;all&quot; aria-pressed=&quot;true&quot;&gt;Todas &lt;span id=&quot;count-all&quot;&gt;0&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;button secondary&quot; type=&quot;button&quot; data-filter=&quot;pending&quot; aria-pressed=&quot;false&quot;&gt;Pendientes &lt;span id=&quot;count-pending&quot;&gt;0&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;button secondary&quot; type=&quot;button&quot; data-filter=&quot;care&quot; aria-pressed=&quot;false&quot;&gt;En atención &lt;span id=&quot;count-care&quot;&gt;0&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;button secondary&quot; type=&quot;button&quot; data-filter=&quot;done&quot; aria-pressed=&quot;false&quot;&gt;Atendidas &lt;span id=&quot;count-done&quot;&gt;0&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;p id=&quot;filter-result&quot; role=&quot;status&quot;&gt;&lt;/p&gt;&lt;/article&gt;
+              &lt;div class=&quot;two-grid tactical-grid&quot;&gt;
+                &lt;div class=&quot;stack&quot;&gt;
+                  &lt;article class=&quot;card&quot;&gt;&lt;h3&gt;Mapa y radar de prueba&lt;/h3&gt;&lt;div class=&quot;actions&quot; role=&quot;group&quot; aria-label=&quot;Tipo de visualización&quot;&gt;&lt;button id=&quot;view-map&quot; class=&quot;button secondary&quot; type=&quot;button&quot; aria-pressed=&quot;true&quot; aria-controls=&quot;map-view&quot;&gt;Mapa de coordenadas&lt;/button&gt;&lt;button id=&quot;view-radar&quot; class=&quot;button secondary&quot; type=&quot;button&quot; aria-pressed=&quot;false&quot; aria-controls=&quot;radar-view&quot;&gt;Radar de ejemplo&lt;/button&gt;&lt;/div&gt;&lt;p class=&quot;small&quot;&gt;Selecciona un marcador o utiliza el listado equivalente. P = pendiente; E = en atención; A = atendida.&lt;/p&gt;&lt;div id=&quot;map-view&quot;&gt;&lt;p id=&quot;map-bounds&quot; class=&quot;small&quot;&gt;&lt;/p&gt;&lt;div id=&quot;map-canvas&quot; class=&quot;map-canvas&quot; role=&quot;group&quot; aria-label=&quot;Mapa esquemático por coordenadas&quot;&gt;&lt;span class=&quot;north&quot; aria-hidden=&quot;true&quot;&gt;N&lt;/span&gt;&lt;div id=&quot;map-markers&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p id=&quot;map-message&quot;&gt;&lt;/p&gt;&lt;/div&gt;&lt;div id=&quot;radar-view&quot; hidden&gt;&lt;p class=&quot;small&quot;&gt;Distribución ilustrativa: no mide distancia, dirección ni intensidad Bluetooth.&lt;/p&gt;&lt;div class=&quot;radar-canvas&quot; role=&quot;group&quot; aria-label=&quot;Radar ilustrativo&quot;&gt;&lt;div id=&quot;radar-markers&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p id=&quot;radar-message&quot;&gt;&lt;/p&gt;&lt;/div&gt;&lt;/article&gt;
+                  &lt;article class=&quot;card&quot;&gt;&lt;h3&gt;Alertas recibidas en la demostración&lt;/h3&gt;&lt;ul id=&quot;alert-list&quot; class=&quot;clean-list&quot;&gt;&lt;/ul&gt;&lt;/article&gt;
+                &lt;/div&gt;
+                &lt;article id=&quot;alert-detail&quot; class=&quot;card&quot; tabindex=&quot;-1&quot; aria-label=&quot;Detalle de alerta&quot;&gt;&lt;/article&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id=&quot;panel-cuidador&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tab-cuidador&quot; tabindex=&quot;0&quot; hidden&gt;
+              &lt;div class=&quot;two-grid&quot;&gt;
+                &lt;article class=&quot;card&quot;&gt;
+                  &lt;h3&gt;Perfil preventivo del familiar&lt;/h3&gt;&lt;p id=&quot;form-state&quot; class=&quot;chip&quot;&gt;Sin perfil guardado&lt;/p&gt;&lt;p class=&quot;small&quot;&gt;Usa datos ficticios. Los campos marcados «obligatorio» requieren una respuesta. «Desconocido» no equivale a «ninguno».&lt;/p&gt;
+                  &lt;form id=&quot;profile-form&quot; novalidate&gt;
+                    &lt;label for=&quot;name&quot;&gt;Nombre del familiar (obligatorio)&lt;/label&gt;&lt;input id=&quot;name&quot; name=&quot;name&quot; maxlength=&quot;80&quot; required autocomplete=&quot;off&quot; aria-describedby=&quot;err-name&quot;&gt;&lt;p id=&quot;err-name&quot; class=&quot;field-error&quot;&gt;&lt;/p&gt;
+                    &lt;div class=&quot;form-grid&quot;&gt;&lt;div&gt;&lt;label for=&quot;age&quot;&gt;Edad en años (obligatorio)&lt;/label&gt;&lt;input id=&quot;age&quot; name=&quot;age&quot; type=&quot;number&quot; min=&quot;0&quot; max=&quot;120&quot; step=&quot;1&quot; required inputmode=&quot;numeric&quot; aria-describedby=&quot;err-age&quot;&gt;&lt;p id=&quot;err-age&quot; class=&quot;field-error&quot;&gt;&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;label for=&quot;blood&quot;&gt;Tipo de sangre (obligatorio)&lt;/label&gt;&lt;select id=&quot;blood&quot; name=&quot;blood&quot; required aria-describedby=&quot;err-blood&quot;&gt;&lt;option value=&quot;&quot;&gt;Selecciona&lt;/option&gt;&lt;option&gt;Desconocido&lt;/option&gt;&lt;option&gt;O+&lt;/option&gt;&lt;option&gt;O-&lt;/option&gt;&lt;option&gt;A+&lt;/option&gt;&lt;option&gt;A-&lt;/option&gt;&lt;option&gt;B+&lt;/option&gt;&lt;option&gt;B-&lt;/option&gt;&lt;option&gt;AB+&lt;/option&gt;&lt;option&gt;AB-&lt;/option&gt;&lt;/select&gt;&lt;p id=&quot;err-blood&quot; class=&quot;field-error&quot;&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+                    &lt;label for=&quot;medications&quot;&gt;Medicación declarada (opcional)&lt;/label&gt;&lt;input id=&quot;medications&quot; name=&quot;medications&quot; maxlength=&quot;200&quot; autocomplete=&quot;off&quot;&gt;&lt;p class=&quot;small&quot;&gt;Vacío se muestra como «Información no disponible».&lt;/p&gt;
+                    &lt;fieldset class=&quot;critical-field&quot;&gt;&lt;legend&gt;Alergias · dato crítico (obligatorio)&lt;/legend&gt;&lt;label for=&quot;allergies&quot;&gt;Alergias conocidas&lt;/label&gt;&lt;input id=&quot;allergies&quot; name=&quot;allergies&quot; maxlength=&quot;200&quot; aria-describedby=&quot;err-allergies&quot;&gt;&lt;label class=&quot;check&quot; for=&quot;no-allergies&quot;&gt;&lt;input id=&quot;no-allergies&quot; type=&quot;checkbox&quot;&gt;Sin alergias conocidas&lt;/label&gt;&lt;p id=&quot;err-allergies&quot; class=&quot;field-error&quot;&gt;&lt;/p&gt;&lt;/fieldset&gt;
+                    &lt;fieldset id=&quot;conditions-field&quot; aria-describedby=&quot;err-conditions&quot;&gt;&lt;legend&gt;Condiciones y movilidad (obligatorio)&lt;/legend&gt;&lt;p class=&quot;small&quot;&gt;Puedes combinar varias condiciones o declarar que ninguna es conocida.&lt;/p&gt;&lt;div class=&quot;check-grid&quot;&gt;
+                      &lt;label class=&quot;check&quot; for=&quot;condition-motor&quot;&gt;&lt;input id=&quot;condition-motor&quot; name=&quot;conditions&quot; type=&quot;checkbox&quot; value=&quot;Movilidad reducida&quot;&gt;Movilidad reducida&lt;/label&gt;
+                      &lt;label class=&quot;check&quot; for=&quot;condition-hearing&quot;&gt;&lt;input id=&quot;condition-hearing&quot; name=&quot;conditions&quot; type=&quot;checkbox&quot; value=&quot;Discapacidad auditiva&quot;&gt;Discapacidad auditiva&lt;/label&gt;
+                      &lt;label class=&quot;check&quot; for=&quot;condition-visual&quot;&gt;&lt;input id=&quot;condition-visual&quot; name=&quot;conditions&quot; type=&quot;checkbox&quot; value=&quot;Discapacidad visual&quot;&gt;Discapacidad visual&lt;/label&gt;
+                      &lt;label class=&quot;check&quot; for=&quot;condition-sensory&quot;&gt;&lt;input id=&quot;condition-sensory&quot; name=&quot;conditions&quot; type=&quot;checkbox&quot; value=&quot;Sensibilidad sensorial&quot;&gt;Sensibilidad sensorial&lt;/label&gt;
+                      &lt;label class=&quot;check&quot; for=&quot;condition-cognitive&quot;&gt;&lt;input id=&quot;condition-cognitive&quot; name=&quot;conditions&quot; type=&quot;checkbox&quot; value=&quot;Discapacidad cognitiva&quot;&gt;Discapacidad cognitiva&lt;/label&gt;
+                      &lt;label class=&quot;check&quot; for=&quot;condition-chronic&quot;&gt;&lt;input id=&quot;condition-chronic&quot; name=&quot;conditions&quot; type=&quot;checkbox&quot; value=&quot;Condición crónica&quot;&gt;Condición crónica&lt;/label&gt;
+                    &lt;/div&gt;&lt;label for=&quot;other-condition&quot;&gt;Otra condición (opcional)&lt;/label&gt;&lt;input id=&quot;other-condition&quot; maxlength=&quot;100&quot;&gt;&lt;label class=&quot;check&quot; for=&quot;no-conditions&quot;&gt;&lt;input id=&quot;no-conditions&quot; type=&quot;checkbox&quot;&gt;Sin condiciones conocidas&lt;/label&gt;&lt;p id=&quot;err-conditions&quot; class=&quot;field-error&quot;&gt;&lt;/p&gt;&lt;/fieldset&gt;
+                    &lt;label for=&quot;equipment&quot;&gt;Equipo de asistencia declarado (opcional)&lt;/label&gt;&lt;input id=&quot;equipment&quot; maxlength=&quot;120&quot; placeholder=&quot;Ejemplo ficticio: silla de ruedas&quot;&gt;&lt;p class=&quot;small&quot;&gt;Se resalta lo declarado. El sistema no deduce necesidades clínicas.&lt;/p&gt;
+                    &lt;fieldset&gt;&lt;legend&gt;Indicaciones antes del contacto&lt;/legend&gt;&lt;label for=&quot;instructions&quot;&gt;Instrucciones especiales (máximo 200 caracteres)&lt;/label&gt;&lt;textarea id=&quot;instructions&quot; rows=&quot;3&quot; aria-describedby=&quot;instruction-count err-instructions&quot;&gt;&lt;/textarea&gt;&lt;p id=&quot;instruction-count&quot; class=&quot;small&quot;&gt;0 de 200 caracteres&lt;/p&gt;&lt;label class=&quot;check&quot; for=&quot;no-instructions&quot;&gt;&lt;input id=&quot;no-instructions&quot; type=&quot;checkbox&quot;&gt;No aplica&lt;/label&gt;&lt;p id=&quot;err-instructions&quot; class=&quot;field-error&quot;&gt;&lt;/p&gt;&lt;/fieldset&gt;
+                    &lt;fieldset&gt;&lt;legend&gt;Autorización de información&lt;/legend&gt;&lt;label class=&quot;check&quot; for=&quot;consent&quot;&gt;&lt;input id=&quot;consent&quot; type=&quot;checkbox&quot; aria-describedby=&quot;consent-help&quot;&gt;Autorizo mostrar este perfil ficticio al rol Rescatista&lt;/label&gt;&lt;p id=&quot;consent-help&quot; class=&quot;small&quot;&gt;Es obligatorio autorizar para compartir datos médicos. Puedes guardar sin autorizar: el SOS mostrará solo identificador y ubicación disponible. Desmarca y guarda para retirar la autorización, o utiliza «Revocar autorización ahora».&lt;/p&gt;&lt;button id=&quot;revoke-consent&quot; class=&quot;button secondary&quot; type=&quot;button&quot;&gt;Revocar autorización ahora&lt;/button&gt;&lt;/fieldset&gt;
+                    &lt;div class=&quot;actions&quot;&gt;&lt;button type=&quot;submit&quot; class=&quot;button primary&quot;&gt;Guardar perfil&lt;/button&gt;&lt;button id=&quot;discard-edit&quot; type=&quot;button&quot; class=&quot;button secondary&quot;&gt;Descartar cambios&lt;/button&gt;&lt;button id=&quot;new-profile&quot; type=&quot;button&quot; class=&quot;button secondary&quot;&gt;Nuevo perfil&lt;/button&gt;&lt;/div&gt;&lt;p id=&quot;form-feedback&quot; role=&quot;status&quot;&gt;&lt;/p&gt;
+                  &lt;/form&gt;
+                &lt;/article&gt;
+                &lt;div class=&quot;stack&quot;&gt;&lt;article class=&quot;card&quot;&gt;&lt;h3&gt;Estado SOS del familiar&lt;/h3&gt;&lt;div id=&quot;family-status&quot; class=&quot;notice&quot; role=&quot;status&quot; aria-atomic=&quot;true&quot;&gt;&lt;/div&gt;&lt;p class=&quot;small&quot;&gt;Último evento local de prueba; no es seguimiento remoto.&lt;/p&gt;&lt;button type=&quot;button&quot; class=&quot;button secondary&quot; data-role-jump=&quot;persona&quot;&gt;Consultar Modo Crisis&lt;/button&gt;&lt;/article&gt;&lt;article class=&quot;card&quot;&gt;&lt;h3&gt;Perfil disponible localmente&lt;/h3&gt;&lt;p class=&quot;small&quot;&gt;Sin consultas a una nube de perfiles.&lt;/p&gt;&lt;div id=&quot;family-profile&quot;&gt;&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;details class=&quot;test-options&quot;&gt;&lt;summary&gt;Escenarios de demostración&lt;/summary&gt;&lt;p&gt;Estas acciones requieren confirmación. Reinician los estados y reemplazan los datos ficticios de esta demostración.&lt;/p&gt;&lt;div class=&quot;actions&quot;&gt;&lt;button id=&quot;load-examples&quot; type=&quot;button&quot; class=&quot;button secondary&quot;&gt;Cargar casos ficticios&lt;/button&gt;&lt;button id=&quot;clear-demo&quot; type=&quot;button&quot; class=&quot;button secondary&quot;&gt;Empezar sin datos&lt;/button&gt;&lt;/div&gt;&lt;p class=&quot;small&quot;&gt;La configuración vacía permite probar «sin perfil», «sin ubicación» y «buscando señales».&lt;/p&gt;&lt;/details&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section id=&quot;accesibilidad&quot; class=&quot;section&quot; aria-labelledby=&quot;access-title&quot;&gt;&lt;div class=&quot;container&quot;&gt;&lt;h2 id=&quot;access-title&quot;&gt;Controles claros, distintos modos de participar&lt;/h2&gt;&lt;div class=&quot;three-grid&quot;&gt;&lt;article&gt;&lt;h3&gt;Teclado y controles táctiles&lt;/h3&gt;&lt;p&gt;Utiliza Tab para recorrer las acciones. En los roles, usa flechas, Inicio y Fin; Enter o Espacio activa el rol. Escape cierra menús y confirmaciones.&lt;/p&gt;&lt;/article&gt;&lt;article&gt;&lt;h3&gt;Estados comprensibles&lt;/h3&gt;&lt;p&gt;Los avisos combinan iconos, texto y color. «En emisión» y «Recepción confirmada» representan eventos diferentes.&lt;/p&gt;&lt;/article&gt;&lt;article&gt;&lt;h3&gt;Datos siempre identificados&lt;/h3&gt;&lt;p&gt;Las ausencias de información se muestran explícitamente. La última ubicación incluye su fecha y el origen de la captura.&lt;/p&gt;&lt;/article&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
+  &lt;/main&gt;
+  &lt;footer class=&quot;site-footer&quot;&gt;&lt;div class=&quot;container&quot;&gt;&lt;h2&gt;SeisAssist · Equipo Nodus&lt;/h2&gt;&lt;p&gt;Proyecto académico de HCI for UX Design · UPC · 2026-20.&lt;/p&gt;&lt;p class=&quot;small&quot;&gt;Alcántara Espinoza Aldair Victor · Escriba Michue Juan David · Hichcas Clemente David Daniel · Juyo Leo Rosa Enma · Palacios Salazar Jonatan Elias.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://www.figma.com/design/UdaPhMkilyz6mWH6QxqBQX/Sin-t%C3%ADtulo?node-id=0-1&quot;&gt;Consultar mockups&lt;/a&gt; · &lt;a href=&quot;https://www.figma.com/make/MZYoSaIhB1m2wr6RlHFd9a/Prototipo-interactivo-SeisAssist?fullscreen=1&quot;&gt;Consultar prototipo interactivo&lt;/a&gt;&lt;/p&gt;&lt;p class=&quot;small&quot;&gt;Versión auditada &lt;span id=&quot;build-id&quot;&gt;3.0.0&lt;/span&gt; · Datos de prueba locales.&lt;/p&gt;&lt;/div&gt;&lt;/footer&gt;
+  &lt;dialog id=&quot;confirm-dialog&quot; aria-labelledby=&quot;dialog-title&quot; aria-describedby=&quot;dialog-description&quot;&gt;&lt;form method=&quot;dialog&quot;&gt;&lt;h2 id=&quot;dialog-title&quot;&gt;Confirmar acción&lt;/h2&gt;&lt;p id=&quot;dialog-description&quot;&gt;&lt;/p&gt;&lt;div class=&quot;actions&quot;&gt;&lt;button id=&quot;dialog-cancel&quot; value=&quot;cancel&quot; class=&quot;button secondary&quot; autofocus&gt;Cancelar&lt;/button&gt;&lt;button id=&quot;dialog-confirm&quot; value=&quot;confirm&quot; class=&quot;button primary&quot;&gt;Confirmar&lt;/button&gt;&lt;/div&gt;&lt;/form&gt;&lt;/dialog&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details><details open><summary>css/styles.css · archivo completo</summary><pre><code>/* SeisAssist 3.0.0. Una base responsive; colores y escala del encargo. */
+@font-face {
+  font-family: Inter;
+  src: url(&#x27;../assets/fonts/Inter-variable.ttf&#x27;) format(&#x27;truetype&#x27;);
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+:root {
+  --petrol: #0F2F3F;
+  --teal: #006B70;
+  --deep: #004950;
+  --sos: #B8232B;
+  --neutral: #F2F4F6;
+  --white: #FFFFFF;
+  --mint: #E2F2F0;
+  --yellow: #FFF4DA;
+  --error: #FFEFEF;
+  --muted: #4A5D6A;
+  --border: #D5DFE5;
+  --radius: .75rem;
+}
+* , *::before, *::after { box-sizing: border-box; }
+html { font-size: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--neutral); color: var(--petrol); font: 400 1rem/1.6 Inter, Arial, sans-serif; }
+[hidden] { display: none !important; }
+h1 { font-size: 1.75rem; font-weight: 700; line-height: 1.3; }
+h2 { font-size: 1.25rem; font-weight: 600; line-height: 1.4; }
+h3, h4 { font-size: 1rem; font-weight: 600; line-height: 1.5; }
+h1, h2, h3, h4 { margin: 0 0 .75rem; }
+p { margin: .5rem 0 1rem; }
+a { color: var(--teal); text-underline-offset: .2em; }
+a:hover { color: var(--deep); }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+button, a, p, dd, h1, h2, h3, h4, label, summary { overflow-wrap: anywhere; }
+img { display: block; max-width: 100%; height: auto; }
+figure { margin: 0; }
+figcaption, .small { font-size: .875rem; line-height: 1.55; }
+figcaption { margin-top: .75rem; }
+.muted, .small { color: var(--muted); }
+.icon { width: 1.5rem; height: 1.5rem; flex-shrink: 0; }
+.container { width: min(100% - 3rem, 80rem); margin-inline: auto; }
+.section, .hero { padding-block: 3rem; }
+section { scroll-margin-top: 1rem; }
+.hero { background: var(--white); border-bottom: 1px solid var(--border); }
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 3rem; }
+.eyebrow { color: var(--teal); font-size: .875rem; font-weight: 600; }
+.three-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+.two-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin-bottom: 1.25rem; align-items: start; }
+.stack { display: grid; gap: 1.25rem; min-width: 0; }
+.card { background: var(--white); padding: 1.5rem; border: 1px solid var(--border); border-radius: var(--radius); min-width: 0; }
+.card &gt; .icon { margin-bottom: .75rem; }
+.three-grid .card { display: flex; flex-direction: column; align-items: flex-start; }
+.three-grid .card p { flex: 1; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; margin-block: .75rem; }
+.button { display: inline-flex; justify-content: center; align-items: center; gap: .4rem; min-height: 2.75rem; max-width: 100%; padding: .6rem 1rem; border: 2px solid var(--teal); border-radius: .5rem; font-size: .9375rem; line-height: 1.5; font-weight: 600; text-decoration: none; }
+.primary { background: var(--teal); color: var(--white); }
+.primary:hover { background: var(--deep); color: var(--white); border-color: var(--deep); }
+.secondary { background: var(--white); color: var(--teal); }
+.secondary:hover { background: var(--mint); color: var(--deep); }
+.button[aria-pressed=&quot;true&quot;] { background: var(--petrol); color: var(--white); border-color: var(--petrol); }
+button:disabled { cursor: default; background: var(--neutral); color: var(--muted); border-color: var(--muted); }
+:focus-visible { outline: 3px solid var(--petrol); outline-offset: 3px; box-shadow: 0 0 0 3px var(--white); }
+.site-header { background: var(--petrol); color: var(--white); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: .75rem; }
+.brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 700; font-size: 1.125rem; color: var(--white); text-decoration: none; min-height: 2.75rem; }
+.brand:hover { color: var(--white); }
+.brand img { width: 2rem; height: 2rem; flex-shrink: 0; }
+#nav-menu { display: flex; gap: 1rem; flex-wrap: wrap; }
+#nav-menu a { color: var(--white); font-size: .9375rem; min-height: 2.75rem; display: inline-flex; align-items: center; padding-inline: .4rem; text-decoration: none; }
+#nav-menu a:hover, #nav-menu a[aria-current] { text-decoration: underline; text-decoration-thickness: 2px; }
+.menu-toggle { display: none; background: var(--petrol); color: var(--white); border: 1px solid var(--white); border-radius: .5rem; padding: .5rem; min-height: 2.75rem; font-size: .875rem; font-weight: 600; }
+.app-shell { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 1.25rem; align-items: start; margin-top: 1.5rem; }
+.role-tabs { background: var(--petrol); padding: .6rem; border-radius: var(--radius); display: grid; gap: .5rem; position: sticky; top: 1rem; }
+.role-tabs button { padding: .8rem .75rem; border: 2px solid transparent; border-radius: .5rem; background: transparent; color: var(--white); font-size: .9375rem; font-weight: 600; text-align: left; min-height: 3rem; }
+.role-tabs button[aria-selected=&quot;true&quot;] { background: var(--white); color: var(--petrol); border-color: var(--teal); }
+.role-tabs button:hover { text-decoration: underline; }
+.panels { min-width: 0; }
+[role=&quot;tabpanel&quot;] &gt; .card { margin-bottom: 1.25rem; }
+.notice { display: flex; gap: .75rem; align-items: flex-start; border: 1px solid var(--teal); border-left-width: 4px; background: var(--mint); padding: 1rem; border-radius: .5rem; margin-block: 1rem; }
+.notice p:last-child { margin-bottom: 0; }
+.notice.warning { background: var(--yellow); border-color: var(--muted); color: var(--petrol); }
+.notice.error { background: var(--error); border-color: var(--sos); color: var(--petrol); }
+.notice.success { background: var(--deep); border-color: var(--deep); color: var(--white); }
+.notice.success .icon { filter: brightness(0) invert(1); }
+.status-text { min-width: 0; }
+.status-text strong { display: block; }
+.chip { display: inline-block; border: 1px solid var(--muted); border-radius: .4rem; padding: .2rem .5rem; font-size: .875rem; font-weight: 500; background: var(--neutral); color: var(--petrol); }
+.crisis-card { border-top: 4px solid var(--sos); }
+.sos-button { width: 100%; min-height: 15rem; background: var(--sos); color: var(--white); border: 2px solid var(--sos); border-radius: var(--radius); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .75rem; padding: 1.25rem; }
+.sos-button strong { font-size: 2.5rem; line-height: 1.2; font-weight: 700; }
+.sos-button .icon { filter: brightness(0) invert(1); }
+.sos-button:hover { box-shadow: inset 0 0 0 3px var(--white); }
+.sos-button[aria-disabled=&quot;true&quot;] { background: var(--deep); border-color: var(--deep); }
+.sos-button span { font-size: 1rem; font-weight: 600; }
+.clean-list { list-style: none; padding: 0; margin: 0; display: grid; gap: .75rem; }
+#diagnostic li { padding-block: .5rem; border-bottom: 1px solid var(--border); }
+#diagnostic .button { margin-top: .5rem; }
+dl { margin: 1rem 0; }
+dt { color: var(--muted); font-size: .875rem; font-weight: 500; }
+dd { margin: .1rem 0 .8rem; }
+.notice.success dt { color: var(--white); }
+.missing { color: var(--muted); font-style: italic; }
+details { margin-block: 1rem; }
+summary { min-height: 2.75rem; padding-block: .6rem; font-size: .9375rem; font-weight: 600; cursor: pointer; color: var(--teal); }
+label { display: block; font-size: .875rem; font-weight: 500; margin-block: .5rem .25rem; }
+input:not([type=&quot;checkbox&quot;]), select, textarea { display: block; width: 100%; max-width: 100%; min-width: 0; min-height: 2.75rem; border: 1px solid var(--muted); border-radius: .4rem; padding: .65rem; background: var(--white); font-size: 1rem; }
+textarea { resize: vertical; min-height: 7rem; }
+input:disabled, textarea:disabled { background: var(--neutral); }
+input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; }
+select { appearance: none; padding-right: 2rem; background-image: url(&#x27;../assets/icons/chevron.svg&#x27;); background-repeat: no-repeat; background-position: right .5rem center; background-size: 1.25rem; }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+fieldset { min-width: 0; margin: 1rem 0; padding: 1rem; border: 1px solid var(--muted); border-radius: .5rem; }
+legend { font-size: .875rem; font-weight: 600; padding-inline: .25rem; max-width: 100%; }
+.critical-field { border-color: var(--sos); background: var(--error); }
+.check-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; }
+.check { display: flex; align-items: flex-start; gap: .6rem; min-height: 2.75rem; padding: .6rem .3rem; cursor: pointer; }
+input[type=&quot;checkbox&quot;] { width: 1.25rem; height: 1.25rem; margin: .1rem 0 0; flex-shrink: 0; accent-color: var(--teal); }
+.field-error { color: var(--sos); font-size: .875rem; margin: .25rem 0 .75rem; font-weight: 500; }
+.field-error:empty { display: none; }
+[aria-invalid=&quot;true&quot;] { border: 2px solid var(--sos) !important; }
+#profile-form &gt; .actions, #voice-form &gt; .button { margin-top: 1rem; }
+input + .button, #alert-detail &gt; .button { margin-top: .75rem; }
+.alert-button { width: 100%; text-align: left; border: 2px solid var(--border); border-radius: .5rem; padding: .8rem; background: var(--white); display: grid; gap: .4rem; min-height: 2.75rem; }
+.alert-button[aria-pressed=&quot;true&quot;] { border-color: var(--teal); background: var(--mint); }
+.alert-button .small { font-size: .875rem; }
+.detail-block { padding: .8rem; border: 1px solid var(--border); border-radius: .5rem; margin-block: 1rem; }
+.detail-block.critical { background: var(--error); border: 2px solid var(--sos); }
+.detail-block.warning { background: var(--yellow); border-color: var(--muted); }
+.detail-block .icon { display: inline-block; vertical-align: middle; margin-right: .4rem; }
+.map-canvas, .radar-canvas { height: 19rem; position: relative; border: 1px solid var(--muted); border-radius: .5rem; margin-top: .75rem; }
+.map-canvas { background-color: var(--neutral); background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px); background-size: 20% 20%; }
+.radar-canvas { background: repeating-radial-gradient(circle at center, var(--petrol) 0 2.8rem, var(--teal) 2.8rem 2.9rem, var(--petrol) 2.9rem 3rem); }
+.north { position: absolute; top: .25rem; right: .5rem; font-weight: 600; }
+.marker { position: absolute; transform: translate(-50%, -50%); width: 2.75rem; height: 2.75rem; border: 2px solid var(--white); box-shadow: 0 0 0 1px var(--petrol); border-radius: .4rem; padding: .1rem; font-size: .875rem; font-weight: 600; background: var(--sos); color: var(--white); }
+.marker[data-state=&quot;care&quot;] { background: var(--yellow); color: var(--petrol); border-color: var(--petrol); }
+.marker[data-state=&quot;done&quot;] { background: var(--deep); }
+.marker[aria-pressed=&quot;true&quot;] { outline: 3px solid var(--petrol); outline-offset: 3px; }
+.radar-canvas .marker[aria-pressed=&quot;true&quot;] { outline-color: var(--white); }
+.test-options { border-top: 1px solid var(--border); padding-top: 1rem; }
+.site-footer { padding-block: 2.5rem; background: var(--petrol); color: var(--white); }
+.site-footer a, .site-footer .small { color: var(--white); }
+dialog { width: min(32rem, calc(100% - 2rem)); max-height: calc(100dvh - 2rem); overflow-y: auto; border: 2px solid var(--petrol); border-radius: var(--radius); padding: 1.5rem; color: var(--petrol); }
+dialog::backdrop { background: rgb(15 47 63 / 70%); }
+.skip-link { position: fixed; z-index: 100; top: -10rem; left: 1rem; padding: 1rem; background: var(--white); color: var(--petrol); }
+.skip-link:focus { top: 1rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+/* Tablet: los mismos controles pasan arriba; el orden del DOM se conserva. */
+@media (max-width: 74.99rem) {
+  .app-shell { grid-template-columns: minmax(0, 1fr); }
+  .role-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); position: static; }
+  .two-grid { grid-template-columns: minmax(0, 1fr); }
+  .check-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* El menú ocupa espacio en el flujo, no cubre el contenido. Sin JS es visible. */
+@media (max-width: 63.99rem) {
+  .header-inner { flex-wrap: wrap; gap: .75rem; }
+  .js .menu-toggle { display: inline-flex; align-items: center; }
+  #nav-menu { flex-basis: 100%; flex-direction: column; gap: .25rem; }
+  .js #nav-menu:not(.is-open) { display: none; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+  .hero-grid figure { max-width: 40rem; }
+  .three-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 47.99rem) {
+  .container { width: calc(100% - 2rem); }
+  .section, .hero { padding-block: 2rem; }
+  .three-grid, .form-grid, .check-grid, .role-tabs { grid-template-columns: minmax(0, 1fr); }
+  .card { padding: 1rem; }
+  fieldset { padding: .75rem; }
+  .actions &gt; .button { flex: 1 1 10rem; }
+  .role-tabs button { padding-block: .65rem; }
+  .notice { padding: .75rem; gap: .5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { scroll-behavior: auto !important; }
+}
+@media (forced-colors: active) {
+  .button, .sos-button, .role-tabs button, .marker { border: 2px solid ButtonText; }
+  :focus-visible { outline: 3px solid Highlight; }
+}
+</code></pre></details><details open><summary>js/main.js · archivo completo</summary><pre><code>/* SeisAssist 3.0.0 · Frontend académico. Sin transporte Bluetooth ni backend. */
+(function () {
+  &#x27;use strict&#x27;;
+  const VERSION = 3;
+  const CARE = { pending: &#x27;Pendiente&#x27;, care: &#x27;En atención&#x27;, done: &#x27;Atendida&#x27; };
+  const PRIORITY = { none: &#x27;Sin prioridad asignada&#x27;, red: &#x27;Rojo&#x27;, yellow: &#x27;Amarillo&#x27;, green: &#x27;Verde&#x27;, black: &#x27;Negro&#x27; };
+  const CONDITIONS = [&#x27;Movilidad reducida&#x27;, &#x27;Discapacidad auditiva&#x27;, &#x27;Discapacidad visual&#x27;, &#x27;Sensibilidad sensorial&#x27;, &#x27;Discapacidad cognitiva&#x27;, &#x27;Condición crónica&#x27;];
+  const BLOOD = [&#x27;Desconocido&#x27;, &#x27;O+&#x27;, &#x27;O-&#x27;, &#x27;A+&#x27;, &#x27;A-&#x27;, &#x27;B+&#x27;, &#x27;B-&#x27;, &#x27;AB+&#x27;, &#x27;AB-&#x27;];
+  const clone = value =&gt; JSON.parse(JSON.stringify(value));
+  const now = () =&gt; new Date().toISOString();
+  const isText = (v, max) =&gt; typeof v === &#x27;string&#x27; &amp;&amp; v.length &lt;= max;
+  const isDate = v =&gt; typeof v === &#x27;string&#x27; &amp;&amp; Number.isFinite(Date.parse(v));
+  const isBool = v =&gt; typeof v === &#x27;boolean&#x27;;
+  const isObject = v =&gt; Boolean(v &amp;&amp; typeof v === &#x27;object&#x27; &amp;&amp; !Array.isArray(v));
+
+  function freshState() {
+    return { version: VERSION, revision: 0, profile: null, location: null, voicePhrase: &#x27;SeisAssist, ayuda&#x27;, sos: null, examples: [] };
+  }
+  function validProfile(p) {
+    return isObject(p) &amp;&amp; isText(p.name, 80) &amp;&amp; p.name.trim().length &gt; 0 &amp;&amp; Number.isInteger(p.age) &amp;&amp; p.age &gt;= 0 &amp;&amp; p.age &lt;= 120 &amp;&amp; BLOOD.includes(p.blood) &amp;&amp;
+      isText(p.medications, 200) &amp;&amp; isText(p.allergies, 200) &amp;&amp; isBool(p.noAllergies) &amp;&amp; (p.noAllergies ? p.allergies === &#x27;&#x27; : p.allergies.trim().length &gt; 0) &amp;&amp;
+      Array.isArray(p.conditions) &amp;&amp; p.conditions.length &lt;= CONDITIONS.length &amp;&amp; p.conditions.every(c =&gt; CONDITIONS.includes(c)) &amp;&amp; new Set(p.conditions).size === p.conditions.length &amp;&amp;
+      isBool(p.noConditions) &amp;&amp; isText(p.otherCondition, 100) &amp;&amp; (p.noConditions ? p.conditions.length === 0 &amp;&amp; p.otherCondition === &#x27;&#x27; : p.conditions.length &gt; 0 || p.otherCondition.trim().length &gt; 0) &amp;&amp;
+      isText(p.equipment, 120) &amp;&amp; isText(p.instructions, 200) &amp;&amp; isBool(p.noInstructions) &amp;&amp; (!p.noInstructions || p.instructions === &#x27;&#x27;) &amp;&amp; isBool(p.consent) &amp;&amp; isDate(p.updatedAt);
+  }
+  function validLocation(l) {
+    return isObject(l) &amp;&amp; Number.isFinite(l.lat) &amp;&amp; Math.abs(l.lat) &lt;= 90 &amp;&amp; Number.isFinite(l.lng) &amp;&amp; Math.abs(l.lng) &lt;= 180 &amp;&amp; isDate(l.at) &amp;&amp; [&#x27;gps&#x27;, &#x27;example&#x27;].includes(l.source) &amp;&amp; (l.accuracy === null || Number.isFinite(l.accuracy) &amp;&amp; l.accuracy &gt;= 0);
+  }
+  function validAlert(a) {
+    return isObject(a) &amp;&amp; /^S6-(LOCAL|[0-9]{4})$/.test(a.id) &amp;&amp; (a.profile === null || validProfile(a.profile) &amp;&amp; a.profile.consent) &amp;&amp;
+      (a.location === null || validLocation(a.location)) &amp;&amp; isDate(a.detectedAt) &amp;&amp; isBool(a.reviewed) &amp;&amp; Object.hasOwn(CARE, a.care) &amp;&amp; Object.hasOwn(PRIORITY, a.priority) &amp;&amp;
+      (a.receipt === null || isObject(a.receipt) &amp;&amp; isText(a.receipt.by, 100) &amp;&amp; a.receipt.by.length &gt; 0 &amp;&amp; isDate(a.receipt.at)) &amp;&amp; (a.care === &#x27;pending&#x27; || a.receipt !== null);
+  }
+  function validateState(s) {
+    if (!isObject(s) || s.version !== VERSION || !Number.isSafeInteger(s.revision) || s.revision &lt; 0 || !(s.profile === null || validProfile(s.profile)) || !(s.location === null || validLocation(s.location)) || !isText(s.voicePhrase, 80) || !s.voicePhrase.trim() || !Array.isArray(s.examples) || s.examples.length &gt; 3) return false;
+    if (!s.examples.every(a =&gt; validAlert(a) &amp;&amp; a.id !== &#x27;S6-LOCAL&#x27;) || new Set(s.examples.map(a =&gt; a.id)).size !== s.examples.length) return false;
+    if (s.sos !== null &amp;&amp; (!validAlert(s.sos) || s.sos.id !== &#x27;S6-LOCAL&#x27; || ![&#x27;failed&#x27;, &#x27;emitting&#x27;, &#x27;confirmed&#x27;].includes(s.sos.phase) || !isDate(s.sos.attemptedAt) ||
+        (s.sos.phase === &#x27;confirmed&#x27;) !== (s.sos.receipt !== null) || s.sos.phase === &#x27;failed&#x27; &amp;&amp; s.sos.care !== &#x27;pending&#x27;)) return false;
+    if (s.sos?.profile &amp;&amp; !s.profile?.consent) return false;
+    return true;
+  }
+  // HU-01/03/04/15. El paquete se toma una vez; un reintento no lo regenera.
+  function activate(s, fail, at = now()) {
+    if (s.sos &amp;&amp; s.sos.phase !== &#x27;failed&#x27;) return false;
+    if (!s.sos) {
+      s.sos = { id: &#x27;S6-LOCAL&#x27;, profile: s.profile?.consent ? clone(s.profile) : null, location: clone(s.location), detectedAt: at, attemptedAt: at, reviewed: false, care: &#x27;pending&#x27;, priority: &#x27;none&#x27;, receipt: null, phase: &#x27;failed&#x27; };
+    }
+    s.sos.attemptedAt = at;
+    s.sos.phase = fail ? &#x27;failed&#x27; : &#x27;emitting&#x27;;
+    if (!fail) s.sos.detectedAt = at;
+    return true;
+  }
+  // HU-05/30/48. Un acuse no inicia atención y no puede duplicarse.
+  function confirmReceipt(a, at = now()) {
+    if (!a || a.receipt || a.phase === &#x27;failed&#x27;) return false;
+    a.receipt = { by: &#x27;Brigadista Demo · B-12&#x27;, at };
+    a.reviewed = true;
+    if (a.id === &#x27;S6-LOCAL&#x27;) a.phase = &#x27;confirmed&#x27;;
+    return true;
+  }
+  // HU-46: revocar elimina el perfil del paquete, incluso si hubo fallo previo.
+  function revoke(s) {
+    if (s.profile) { s.profile.consent = false; s.profile.updatedAt = now(); }
+    if (s.sos) s.sos.profile = null;
+  }
+  function saveProfile(s, profile) {
+    s.profile = clone(profile);
+    if (!profile.consent) revoke(s);
+    else if (s.sos &amp;&amp; s.sos.phase !== &#x27;failed&#x27;) s.sos.profile = clone(profile);
+  }
+  function exampleState() {
+    const s = freshState();
+    const at = &#x27;2026-11-19T18:00:00.000Z&#x27;;
+    s.profile = { name: &#x27;Carlos · caso ficticio&#x27;, age: 42, blood: &#x27;O+&#x27;, medications: &#x27;&#x27;, allergies: &#x27;Alergia ficticia registrada&#x27;, noAllergies: false, conditions: [&#x27;Movilidad reducida&#x27;], otherCondition: &#x27;&#x27;, noConditions: false, equipment: &#x27;Silla de ruedas (dato ficticio)&#x27;, instructions: &#x27;Ejemplo: explicar cada paso con calma antes del contacto.&#x27;, noInstructions: false, consent: false, updatedAt: at };
+    s.location = { lat: -12.1042, lng: -76.9631, at, source: &#x27;example&#x27;, accuracy: null };
+    const a = { id: &#x27;S6-3105&#x27;, profile: { ...clone(s.profile), name: &#x27;Alex · caso ficticio&#x27;, consent: true, noAllergies: true, allergies: &#x27;&#x27;, noInstructions: true, instructions: &#x27;&#x27; }, location: { ...s.location, lat: -12.1051, lng: -76.9618 }, detectedAt: at, reviewed: true, care: &#x27;care&#x27;, priority: &#x27;red&#x27;, receipt: { by: &#x27;Brigadista Demo · B-12&#x27;, at } };
+    s.examples = [a, { id: &#x27;S6-9012&#x27;, profile: null, location: null, detectedAt: at, reviewed: false, care: &#x27;pending&#x27;, priority: &#x27;none&#x27;, receipt: null }, { ...clone(a), id: &#x27;S6-4410&#x27;, profile: { ...clone(a.profile), name: &#x27;Rosa · caso ficticio&#x27;, allergies: &#x27;Alergia ficticia B&#x27;, noAllergies: false }, location: { ...s.location, lat: -12.1030, lng: -76.9649 }, care: &#x27;done&#x27;, priority: &#x27;yellow&#x27; }];
+    return s;
+  }
+  function coordinates(alerts) {
+    const located = alerts.filter(a =&gt; a.location);
+    if (!located.length) return { markers: [], bounds: null };
+    const lats = located.map(a =&gt; a.location.lat), lngs = located.map(a =&gt; a.location.lng);
+    const minLat = Math.min(...lats), maxLat = Math.max(...lats), minLng = Math.min(...lngs), maxLng = Math.max(...lngs);
+    const dy = Math.max(maxLat - minLat, .001), dx = Math.max(maxLng - minLng, .001);
+    const midLat = (maxLat + minLat) / 2, midLng = (maxLng + minLng) / 2;
+    const groups = new Map();
+    // Coordenadas coincidentes: un solo marcador abre una selección, sin tapar controles.
+    located.forEach(a =&gt; {
+      const key = `${a.location.lat.toFixed(4)},${a.location.lng.toFixed(4)}`;
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(a);
+    });
+    const markers = [...groups.values()].map(items =&gt; ({ items, x: 50 + (items[0].location.lng - midLng) / dx * 60, y: 50 - (items[0].location.lat - midLat) / dy * 60 }));
+    // Agrupar también puntos próximos: 52 px de separación en el mapa mínimo
+    // (210 × 304). El grupo conserva todos los casos en el listado accesible.
+    let merged = true;
+    while (merged) {
+      merged = false;
+      outer: for (let i = 0; i &lt; markers.length; i++) for (let j = i + 1; j &lt; markers.length; j++) {
+        const a = markers[i], b = markers[j];
+        if (Math.abs(a.x - b.x) * 2.1 &lt; 52 &amp;&amp; Math.abs(a.y - b.y) * 3.04 &lt; 52) {
+          const total = a.items.length + b.items.length;
+          a.x = (a.x * a.items.length + b.x * b.items.length) / total;
+          a.y = (a.y * a.items.length + b.y * b.items.length) / total;
+          a.items.push(...b.items); markers.splice(j, 1); merged = true; break outer;
+        }
+      }
+    }
+    return { markers, bounds: { minLat, maxLat, minLng, maxLng } };
+  }
+  // Exportación exclusiva para pruebas Node; no añade APIs globales al navegador.
+  if (typeof module !== &#x27;undefined&#x27; &amp;&amp; module.exports) { module.exports = { freshState, exampleState, validateState, validProfile, validLocation, activate, confirmReceipt, revoke, saveProfile, coordinates }; return; }
+
+  document.documentElement.classList.add(&#x27;js&#x27;);
+  const $ = id =&gt; document.getElementById(id);
+  const escape = s =&gt; String(s ?? &#x27;&#x27;).replace(/[&amp;&lt;&gt;&quot;&#x27;]/g, c =&gt; ({ &#x27;&amp;&#x27;: &#x27;&amp;amp;&#x27;, &#x27;&lt;&#x27;: &#x27;&amp;lt;&#x27;, &#x27;&gt;&#x27;: &#x27;&amp;gt;&#x27;, &#x27;&quot;&#x27;: &#x27;&amp;quot;&#x27;, &quot;&#x27;&quot;: &#x27;&amp;#39;&#x27; }[c]));
+  const icon = name =&gt; `&lt;img class=&quot;icon&quot; src=&quot;../assets/icons/${name}.svg&quot; alt=&quot;&quot;&gt;`;
+  const date = value =&gt; value ? new Intl.DateTimeFormat(&#x27;es-PE&#x27;, { dateStyle: &#x27;short&#x27;, timeStyle: &#x27;medium&#x27; }).format(new Date(value)) : &#x27;Sin registro&#x27;;
+  const rootURL = new URL(&#x27;../&#x27;, location.href);
+  const KEY = `seisassist:v3:${rootURL.pathname}`;
+  let state = freshState(), persisted = false, dirty = false, activeRole = &#x27;persona&#x27;, selected = null, filter = &#x27;all&#x27;, dialogAction = null, dialogOrigin = null;
+  let storageBaseline = null, conflict = false, gpsRequest = 0;
+
+  function warning(message) { $(&#x27;storage-warning&#x27;).hidden = !message; $(&#x27;storage-warning&#x27;).textContent = message ? `⚠ ${message}` : &#x27;&#x27;; }
+  try {
+    const raw = localStorage.getItem(KEY);
+    storageBaseline = raw;
+    if (raw) {
+      const candidate = JSON.parse(raw);
+      if (!validateState(candidate)) throw new Error(&#x27;invalid-state&#x27;);
+      state = candidate;
+      persisted = true;
+    }
+  } catch (error) {
+    warning(&#x27;No se pudo leer una copia local válida. Se abre una sesión vacía; los datos anteriores no se sobrescriben hasta que guardes o confirmes un reinicio.&#x27;);
+  }
+  function announce(message) {
+    $(&#x27;live&#x27;).textContent = &#x27;&#x27;;
+    requestAnimationFrame(() =&gt; { $(&#x27;live&#x27;).textContent = message; });
+  }
+  function changedElsewhere() {
+    try { return localStorage.getItem(KEY) !== storageBaseline; } catch { return false; }
+  }
+  function canMutate() {
+    if (conflict || changedElsewhere()) {
+      conflict = true; $(&#x27;tab-conflict&#x27;).hidden = false;
+      announce(&#x27;Otra pestaña cambió los datos. Recarga antes de continuar.&#x27;);
+      return false;
+    }
+    return true;
+  }
+  function persist() {
+    state.revision++;
+    try {
+      const serialized = JSON.stringify(state);
+      localStorage.setItem(KEY, serialized);
+      storageBaseline = serialized;
+      persisted = true; warning(&#x27;&#x27;); return true;
+    } catch {
+      persisted = false;
+      warning(&#x27;No se pudo guardar en este navegador. Los cambios existen solo en esta sesión; se perderán al cerrar o recargar. Reintenta guardar cuando el almacenamiento esté disponible.&#x27;);
+      return false;
+    }
+  }
+  function commit(message) {
+    const ok = persist(); renderAll();
+    announce(`${message} ${ok ? &#x27;Guardado localmente.&#x27; : &#x27;Solo en esta sesión; no se pudo guardar.&#x27;}`);
+    return ok;
+  }
+  window.addEventListener(&#x27;storage&#x27;, event =&gt; {
+    if (event.key !== KEY &amp;&amp; event.key !== null) return;
+    conflict = true; $(&#x27;tab-conflict&#x27;).hidden = false;
+    announce(&#x27;Otra pestaña cambió los datos; recarga antes de continuar.&#x27;);
+  });
+
+  // Diálogo nativo: fondo inerte, Tab contenido, Escape y devolución de foco.
+  function confirm(title, description, action, label = &#x27;Confirmar&#x27;) {
+    dialogOrigin = document.activeElement;
+    $(&#x27;dialog-title&#x27;).textContent = title; $(&#x27;dialog-description&#x27;).textContent = description;
+    $(&#x27;dialog-confirm&#x27;).textContent = label; dialogAction = action;
+    $(&#x27;confirm-dialog&#x27;).returnValue = &#x27;cancel&#x27;; $(&#x27;confirm-dialog&#x27;).showModal(); $(&#x27;dialog-cancel&#x27;).focus();
+  }
+  $(&#x27;confirm-dialog&#x27;).addEventListener(&#x27;close&#x27;, () =&gt; {
+    const action = dialogAction; dialogAction = null;
+    if (dialogOrigin?.isConnected) dialogOrigin.focus();
+    if ($(&#x27;confirm-dialog&#x27;).returnValue === &#x27;confirm&#x27; &amp;&amp; action) action();
+  });
+  $(&#x27;confirm-dialog&#x27;).addEventListener(&#x27;cancel&#x27;, () =&gt; { $(&#x27;confirm-dialog&#x27;).returnValue = &#x27;cancel&#x27;; });
+  $(&#x27;confirm-dialog&#x27;).addEventListener(&#x27;keydown&#x27;, e =&gt; {
+    if (e.key !== &#x27;Tab&#x27;) return;
+    if (e.shiftKey &amp;&amp; document.activeElement === $(&#x27;dialog-cancel&#x27;)) { e.preventDefault(); $(&#x27;dialog-confirm&#x27;).focus(); }
+    else if (!e.shiftKey &amp;&amp; document.activeElement === $(&#x27;dialog-confirm&#x27;)) { e.preventDefault(); $(&#x27;dialog-cancel&#x27;).focus(); }
+  });
+
+  function closeMenu(returnFocus = false) {
+    $(&#x27;nav-menu&#x27;).classList.remove(&#x27;is-open&#x27;); $(&#x27;menu-toggle&#x27;).setAttribute(&#x27;aria-expanded&#x27;, &#x27;false&#x27;); $(&#x27;menu-toggle&#x27;).textContent = &#x27;Abrir menú&#x27;;
+    if (returnFocus) $(&#x27;menu-toggle&#x27;).focus();
+  }
+  $(&#x27;menu-toggle&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+    const open = $(&#x27;nav-menu&#x27;).classList.toggle(&#x27;is-open&#x27;); $(&#x27;menu-toggle&#x27;).setAttribute(&#x27;aria-expanded&#x27;, String(open)); $(&#x27;menu-toggle&#x27;).textContent = open ? &#x27;Cerrar menú&#x27; : &#x27;Abrir menú&#x27;;
+  });
+  document.addEventListener(&#x27;keydown&#x27;, e =&gt; { if (e.key === &#x27;Escape&#x27; &amp;&amp; $(&#x27;nav-menu&#x27;).classList.contains(&#x27;is-open&#x27;) &amp;&amp; !$(&#x27;confirm-dialog&#x27;).open) closeMenu(true); });
+  document.addEventListener(&#x27;click&#x27;, e =&gt; { if (!e.target.closest(&#x27;.site-header&#x27;)) closeMenu(); });
+  const navBreakpoint = matchMedia(&#x27;(max-width: 63.99rem)&#x27;);
+  navBreakpoint.addEventListener(&#x27;change&#x27;, () =&gt; closeMenu());
+  document.querySelectorAll(&#x27;#nav-menu a&#x27;).forEach(a =&gt; a.addEventListener(&#x27;click&#x27;, () =&gt; {
+    closeMenu(); const target = document.querySelector(a.getAttribute(&#x27;href&#x27;)); target.setAttribute(&#x27;tabindex&#x27;, &#x27;-1&#x27;); target.focus({ preventScroll: true });
+  }));
+  if (&#x27;IntersectionObserver&#x27; in window) {
+    const observer = new IntersectionObserver(entries =&gt; {
+      for (const entry of entries) if (entry.isIntersecting) document.querySelectorAll(&#x27;#nav-menu a&#x27;).forEach(a =&gt; {
+        if (a.hash === `#${entry.target.id}`) a.setAttribute(&#x27;aria-current&#x27;, &#x27;location&#x27;); else a.removeAttribute(&#x27;aria-current&#x27;);
+      });
+    }, { rootMargin: &#x27;-5% 0px -70% 0px&#x27; });
+    document.querySelectorAll(&#x27;main &gt; section&#x27;).forEach(section =&gt; observer.observe(section));
+  }
+  const tabs = [...document.querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;)];
+  function switchRole(role, scroll = false) {
+    const apply = () =&gt; {
+      activeRole = role;
+      tabs.forEach(t =&gt; { const on = t.id === `tab-${role}`; t.setAttribute(&#x27;aria-selected&#x27;, String(on)); t.tabIndex = on ? 0 : -1; $(t.getAttribute(&#x27;aria-controls&#x27;)).hidden = !on; });
+      $(`tab-${role}`).focus({ preventScroll: true });
+      if (scroll) $(&#x27;plataforma&#x27;).scrollIntoView({ behavior: matchMedia(&#x27;(prefers-reduced-motion: reduce)&#x27;).matches ? &#x27;auto&#x27; : &#x27;smooth&#x27; });
+    };
+    if (role !== activeRole &amp;&amp; activeRole === &#x27;cuidador&#x27; &amp;&amp; dirty) confirm(&#x27;Cambios sin guardar&#x27;, &#x27;Si cambias de rol se descartará el borrador. La última versión guardada se conserva.&#x27;, () =&gt; { populateForm(); apply(); }, &#x27;Descartar y cambiar&#x27;);
+    else apply();
+  }
+  const tabLayout = matchMedia(&#x27;(min-width: 75rem)&#x27;);
+  const tabMobile = matchMedia(&#x27;(max-width: 47.99rem)&#x27;);
+  function tabOrientation() { document.querySelector(&#x27;[role=&quot;tablist&quot;]&#x27;).setAttribute(&#x27;aria-orientation&#x27;, tabLayout.matches || tabMobile.matches ? &#x27;vertical&#x27; : &#x27;horizontal&#x27;); }
+  tabLayout.addEventListener(&#x27;change&#x27;, tabOrientation); tabMobile.addEventListener(&#x27;change&#x27;, tabOrientation); tabOrientation();
+  tabs.forEach((tab, i) =&gt; {
+    tab.addEventListener(&#x27;click&#x27;, () =&gt; switchRole(tab.id.slice(4)));
+    tab.addEventListener(&#x27;keydown&#x27;, e =&gt; {
+      const vertical = document.querySelector(&#x27;[role=&quot;tablist&quot;]&#x27;).getAttribute(&#x27;aria-orientation&#x27;) === &#x27;vertical&#x27;;
+      const prev = vertical ? &#x27;ArrowUp&#x27; : &#x27;ArrowLeft&#x27;, next = vertical ? &#x27;ArrowDown&#x27; : &#x27;ArrowRight&#x27;;
+      if (![prev, next, &#x27;Home&#x27;, &#x27;End&#x27;].includes(e.key)) return;
+      e.preventDefault();
+      const index = e.key === &#x27;Home&#x27; ? 0 : e.key === &#x27;End&#x27; ? tabs.length - 1 : (i + (e.key === next ? 1 : -1) + tabs.length) % tabs.length;
+      // Activación manual: mover el foco no descarta formularios ni cambia el rol.
+      tabs[index].focus();
+    });
+  });
+  document.querySelectorAll(&#x27;[data-role-jump]&#x27;).forEach(button =&gt; button.addEventListener(&#x27;click&#x27;, e =&gt; { e.preventDefault(); switchRole(button.dataset.roleJump, true); }));
+
+  // HU-01/02/03/15: acciones accesibles e idempotentes.
+  function emit(retry = false) {
+    if (!canMutate()) return;
+    if (state.sos &amp;&amp; state.sos.phase !== &#x27;failed&#x27;) { announce(&#x27;La alerta ya está activa. Se conserva su estado y su acuse.&#x27;); return; }
+    if (retry) $(&#x27;fail-emission&#x27;).checked = false;
+    activate(state, $(&#x27;fail-emission&#x27;).checked);
+    const failed = state.sos.phase === &#x27;failed&#x27;;
+    commit(failed ? &#x27;Fallo local simulado. Puedes reintentar.&#x27; : &#x27;SOS de prueba en emisión; aún sin recepción confirmada.&#x27;);
+    if (retry &amp;&amp; !failed) $(&#x27;sos-activate&#x27;).focus();
+  }
+  $(&#x27;sos-activate&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; emit()); $(&#x27;sos-retry&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; emit(true));
+  $(&#x27;voice-form&#x27;).addEventListener(&#x27;submit&#x27;, e =&gt; {
+    e.preventDefault();
+    const phrase = $(&#x27;voice-phrase&#x27;).value.trim();
+    const valid = phrase.length &gt; 0 &amp;&amp; phrase.length &lt;= 80;
+    $(&#x27;voice-phrase&#x27;).setAttribute(&#x27;aria-invalid&#x27;, String(!valid));
+    if (!valid) { $(&#x27;voice-feedback&#x27;).textContent = &#x27;⚠ Escribe una frase de 1 a 80 caracteres.&#x27;; $(&#x27;voice-phrase&#x27;).focus(); return; }
+    if (!canMutate()) return;
+    state.voicePhrase = phrase; const ok = commit(&#x27;Frase configurada.&#x27;);
+    $(&#x27;voice-feedback&#x27;).textContent = ok ? &#x27;✓ Frase guardada localmente.&#x27; : &#x27;⚠ Frase disponible solo en esta sesión.&#x27;;
+  });
+  $(&#x27;test-voice&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+    const received = $(&#x27;voice-test&#x27;).value.trim().normalize(&#x27;NFC&#x27;).toLocaleLowerCase(&#x27;es&#x27;);
+    const expected = state.voicePhrase.trim().normalize(&#x27;NFC&#x27;).toLocaleLowerCase(&#x27;es&#x27;);
+    const matches = received === expected;
+    $(&#x27;voice-feedback&#x27;).textContent = matches ? &#x27;✓ Coincidencia reconocida en la simulación por texto.&#x27; : &#x27;⚠ Comando no reconocido. La alerta no cambia. Utiliza la frase configurada completa.&#x27;;
+    if (matches) emit();
+  });
+
+  // HU-11/12: una captura real solo se toma de Geolocation; nunca se fabrica al fallar.
+  function applyLocation(loc) {
+    if (!validLocation(loc) || !canMutate()) return false;
+    state.location = loc;
+    if (state.sos &amp;&amp; state.sos.phase !== &#x27;failed&#x27;) state.sos.location = clone(loc);
+    return commit(&#x27;Captura histórica actualizada.&#x27;);
+  }
+  $(&#x27;update-location&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+    if (!canMutate()) return;
+    const feedback = $(&#x27;location-feedback&#x27;);
+    const failure = message =&gt; { feedback.textContent = `⚠ ${message} Se conserva la última captura válida, si existe.`; $(&#x27;update-location&#x27;).disabled = false; };
+    if ($(&#x27;fail-location&#x27;).checked) { failure(&#x27;Fallo GPS simulado.&#x27;); return; }
+    if (!navigator.geolocation || !isSecureContext) { failure(&#x27;GPS no disponible. Se necesita HTTPS o localhost y permiso de ubicación.&#x27;); return; }
+    const request = ++gpsRequest;
+    $(&#x27;update-location&#x27;).disabled = true; feedback.textContent = &#x27;Solicitando una captura GPS…&#x27;;
+    navigator.geolocation.getCurrentPosition(pos =&gt; {
+      if (request !== gpsRequest) return;
+      const loc = { lat: pos.coords.latitude, lng: pos.coords.longitude, at: new Date(pos.timestamp).toISOString(), source: &#x27;gps&#x27;, accuracy: pos.coords.accuracy };
+      if (!validLocation(loc)) { failure(&#x27;El dispositivo devolvió coordenadas inválidas.&#x27;); return; }
+      const ok = applyLocation(loc); $(&#x27;update-location&#x27;).disabled = false;
+      feedback.textContent = conflict ? &#x27;⚠ Otra pestaña cambió los datos. No se aplicó la captura.&#x27; : ok ? &#x27;✓ Captura GPS guardada con su fecha.&#x27; : &#x27;⚠ Captura GPS disponible solo en esta sesión.&#x27;;
+    }, error =&gt; { if (request === gpsRequest) failure(error.code === 1 ? &#x27;Permiso GPS denegado.&#x27; : error.code === 3 ? &#x27;Tiempo de espera GPS agotado.&#x27; : &#x27;No se pudo obtener ubicación.&#x27;); }, { timeout: 10000, maximumAge: 0, enableHighAccuracy: false });
+  });
+  $(&#x27;example-location&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+    if (!canMutate()) return;
+    confirm(&#x27;Usar coordenadas de ejemplo&#x27;, &#x27;Reemplaza la captura local con un ejemplo ficticio de Lima. No representa tu ubicación real.&#x27;, () =&gt; {
+      gpsRequest++; $(&#x27;update-location&#x27;).disabled = false;
+      const ok = applyLocation({ lat: -12.1042, lng: -76.9631, at: now(), source: &#x27;example&#x27;, accuracy: null });
+      $(&#x27;location-feedback&#x27;).textContent = ok ? &#x27;✓ Ejemplo guardado y etiquetado como ficticio.&#x27; : &#x27;⚠ Ejemplo disponible solo en esta sesión.&#x27;;
+    });
+  });
+
+  function profileHTML(p) {
+    if (!p) return &#x27;&lt;p class=&quot;missing&quot;&gt;No hay datos de emergencia disponibles en este navegador.&lt;/p&gt;&#x27;;
+    return `&lt;dl&gt;&lt;dt&gt;Nombre y edad&lt;/dt&gt;&lt;dd&gt;${escape(p.name)} · ${p.age} años&lt;/dd&gt;&lt;dt&gt;Tipo de sangre&lt;/dt&gt;&lt;dd&gt;${escape(p.blood)}&lt;/dd&gt;&lt;dt&gt;Alergias&lt;/dt&gt;&lt;dd&gt;${escape(p.noAllergies ? &#x27;Sin alergias conocidas (declarado)&#x27; : p.allergies)}&lt;/dd&gt;&lt;dt&gt;Medicación&lt;/dt&gt;&lt;dd&gt;${escape(p.medications || &#x27;Información no disponible&#x27;)}&lt;/dd&gt;&lt;dt&gt;Condiciones y movilidad&lt;/dt&gt;&lt;dd&gt;${escape(p.noConditions ? &#x27;Sin condiciones conocidas (declarado)&#x27; : [...p.conditions, p.otherCondition].filter(Boolean).join(&#x27; · &#x27;))}&lt;/dd&gt;&lt;dt&gt;Equipo de asistencia declarado&lt;/dt&gt;&lt;dd&gt;${escape(p.equipment || &#x27;Información no disponible&#x27;)}&lt;/dd&gt;&lt;dt&gt;Instrucciones antes del contacto&lt;/dt&gt;&lt;dd&gt;${escape(p.noInstructions ? &#x27;No aplica (declarado)&#x27; : p.instructions || &#x27;Información no disponible&#x27;)}&lt;/dd&gt;&lt;dt&gt;Autorización&lt;/dt&gt;&lt;dd&gt;${p.consent ? &#x27;Autorizado para la vista Rescatista&#x27; : &#x27;No autorizado: señal básica sin datos médicos&#x27;}&lt;/dd&gt;&lt;dt&gt;Actualización local&lt;/dt&gt;&lt;dd&gt;${date(p.updatedAt)}&lt;/dd&gt;&lt;/dl&gt;`;
+  }
+  function statusHTML() {
+    const a = state.sos;
+    if (!a) return `${icon(&#x27;shield&#x27;)}&lt;div class=&quot;status-text&quot;&gt;&lt;strong&gt;Sin SOS activo&lt;/strong&gt;&lt;p&gt;No hay eventos de alerta registrados.&lt;/p&gt;&lt;/div&gt;`;
+    const title = a.phase === &#x27;failed&#x27; ? &#x27;Fallo de emisión de prueba&#x27; : a.phase === &#x27;confirmed&#x27; ? &#x27;Recepción confirmada de prueba&#x27; : &#x27;En emisión de prueba · sin acuse&#x27;;
+    const text = a.phase === &#x27;failed&#x27; ? &#x27;No se emitió el paquete. Reintenta con los mismos datos.&#x27; : a.phase === &#x27;confirmed&#x27; ? `Acuse de ${a.receipt.by}. No implica rescate iniciado ni llegada de ayuda.` : &#x27;Aún no existe confirmación del rol Rescatista.&#x27;;
+    return `${icon(a.phase === &#x27;confirmed&#x27; ? &#x27;check&#x27; : &#x27;alert&#x27;)}&lt;div class=&quot;status-text&quot;&gt;&lt;strong&gt;${title}&lt;/strong&gt;&lt;p&gt;${escape(text)}&lt;/p&gt;&lt;p&gt;${a.profile ? &#x27;Incluye el perfil ficticio autorizado.&#x27; : &#x27;Señal básica: sin datos médicos.&#x27;}&lt;/p&gt;&lt;p&gt;${a.phase === &#x27;failed&#x27; ? &#x27;Intento&#x27; : &#x27;Última detección local&#x27;}: ${date(a.phase === &#x27;failed&#x27; ? a.attemptedAt : a.detectedAt)}&lt;/p&gt;${a.receipt ? `&lt;p&gt;Acuse: ${date(a.receipt.at)}&lt;/p&gt;` : &#x27;&#x27;}&lt;/div&gt;`;
+  }
+  function renderPersona() {
+    [&#x27;sos-status&#x27;, &#x27;family-status&#x27;].forEach(id =&gt; { $(id).innerHTML = statusHTML(); $(id).className = `notice ${state.sos?.phase === &#x27;failed&#x27; ? &#x27;error&#x27; : state.sos?.phase === &#x27;confirmed&#x27; ? &#x27;success&#x27; : &#x27;warning&#x27;}`; });
+    const active = Boolean(state.sos &amp;&amp; state.sos.phase !== &#x27;failed&#x27;);
+    $(&#x27;sos-activate&#x27;).setAttribute(&#x27;aria-disabled&#x27;, String(active));
+    $(&#x27;sos-button-label&#x27;).textContent = active ? &#x27;SOS de prueba activo&#x27; : &#x27;Activar SOS de prueba&#x27;;
+    $(&#x27;sos-retry&#x27;).hidden = state.sos?.phase !== &#x27;failed&#x27;;
+    $(&#x27;persona-profile&#x27;).innerHTML = profileHTML(state.profile); $(&#x27;family-profile&#x27;).innerHTML = profileHTML(state.profile);
+    const l = state.location;
+    $(&#x27;location-data&#x27;).innerHTML = l ? `&lt;dt&gt;Coordenadas históricas&lt;/dt&gt;&lt;dd&gt;${l.lat.toFixed(6)}, ${l.lng.toFixed(6)}&lt;/dd&gt;&lt;dt&gt;Captura&lt;/dt&gt;&lt;dd&gt;${date(l.at)}&lt;/dd&gt;&lt;dt&gt;Origen&lt;/dt&gt;&lt;dd&gt;${l.source === &#x27;gps&#x27; ? &#x27;GPS del dispositivo&#x27; : &#x27;Ejemplo ficticio; no es tu ubicación&#x27;}&lt;/dd&gt;&lt;dt&gt;Precisión informada&lt;/dt&gt;&lt;dd&gt;${l.accuracy === null ? &#x27;No disponible en el ejemplo&#x27; : `${Math.round(l.accuracy)} metros; no es distancia de rescate`}&lt;/dd&gt;` : &#x27;&lt;dt&gt;Coordenadas&lt;/dt&gt;&lt;dd&gt;Información no disponible&lt;/dd&gt;&lt;dt&gt;Captura&lt;/dt&gt;&lt;dd&gt;Sin capturas previas&lt;/dd&gt;&#x27;;
+    const ready = Boolean(state.profile &amp;&amp; state.location &amp;&amp; persisted);
+    $(&#x27;readiness&#x27;).textContent = ready ? &#x27;✓ Preparado para la demostración local&#x27; : &#x27;⚠ Preparación pendiente&#x27;;
+    const checks = [
+      [Boolean(state.profile), &#x27;Perfil de emergencia&#x27;, &#x27;Registrar perfil&#x27;, &#x27;profile&#x27;],
+      [Boolean(state.location), &#x27;Captura histórica de ubicación&#x27;, &#x27;Actualizar ubicación&#x27;, &#x27;location&#x27;],
+      [persisted, &#x27;Persistencia en este navegador&#x27;, &#x27;Reintentar guardado&#x27;, &#x27;storage&#x27;]
+    ];
+    $(&#x27;diagnostic&#x27;).innerHTML = checks.map(([ok, label, action, key]) =&gt; `&lt;li&gt;${ok ? &#x27;✓ Listo&#x27; : &#x27;⚠ Pendiente&#x27;}: ${label}${!ok ? `&lt;br&gt;&lt;button type=&quot;button&quot; class=&quot;button secondary&quot; data-fix=&quot;${key}&quot;&gt;${action}&lt;/button&gt;` : &#x27;&#x27;}&lt;/li&gt;`).join(&#x27;&#x27;);
+  }
+  $(&#x27;diagnostic&#x27;).addEventListener(&#x27;click&#x27;, e =&gt; {
+    const button = e.target.closest(&#x27;[data-fix]&#x27;); if (!button) return;
+    if (button.dataset.fix === &#x27;profile&#x27;) switchRole(&#x27;cuidador&#x27;, true);
+    if (button.dataset.fix === &#x27;location&#x27;) $(&#x27;update-location&#x27;).focus();
+    if (button.dataset.fix === &#x27;storage&#x27; &amp;&amp; canMutate()) { commit(&#x27;Copia local actualizada.&#x27;); $(&#x27;readiness&#x27;).setAttribute(&#x27;tabindex&#x27;, &#x27;-1&#x27;); $(&#x27;readiness&#x27;).focus(); }
+  });
+
+  function alerts() { return [...(state.sos &amp;&amp; state.sos.phase !== &#x27;failed&#x27; ? [state.sos] : []), ...state.examples]; }
+  function filteredAlerts() { return alerts().filter(a =&gt; filter === &#x27;all&#x27; || a.care === filter); }
+  function selectAlert(id) {
+    if (!canMutate()) return;
+    const a = alerts().find(item =&gt; item.id === id); if (!a) return;
+    selected = id; a.reviewed = true; persist(); renderRescue(); $(&#x27;alert-detail&#x27;).focus(); announce(`Detalle de ${id} abierto. Alerta revisada.`);
+  }
+  function marker(a, label, x, y) {
+    const button = document.createElement(&#x27;button&#x27;); button.type = &#x27;button&#x27;; button.className = &#x27;marker&#x27;;
+    button.dataset.state = a.care; button.style.left = `${x}%`; button.style.top = `${y}%`;
+    button.textContent = label; button.setAttribute(&#x27;aria-pressed&#x27;, String(selected === a.id));
+    button.setAttribute(&#x27;aria-label&#x27;, `${a.id}. ${CARE[a.care]}. Prioridad ${PRIORITY[a.priority]}. Abrir detalle.`);
+    button.title = `${a.id} · ${CARE[a.care]} · ${PRIORITY[a.priority]}`;
+    button.addEventListener(&#x27;click&#x27;, () =&gt; selectAlert(a.id)); return button;
+  }
+  function renderRescue() {
+    const list = filteredAlerts();
+    if (selected &amp;&amp; !list.some(a =&gt; a.id === selected)) selected = null;
+    [&#x27;all&#x27;, &#x27;pending&#x27;, &#x27;care&#x27;, &#x27;done&#x27;].forEach(key =&gt; { $(`count-${key}`).textContent = alerts().filter(a =&gt; key === &#x27;all&#x27; || a.care === key).length; });
+    $(&#x27;filter-result&#x27;).textContent = `${list.length} alertas en el filtro ${filter === &#x27;all&#x27; ? &#x27;Todas&#x27; : CARE[filter]}.`;
+    $(&#x27;alert-list&#x27;).innerHTML = list.length ? list.map((a, i) =&gt; `&lt;li&gt;&lt;button type=&quot;button&quot; class=&quot;alert-button&quot; data-alert=&quot;${a.id}&quot; aria-pressed=&quot;${a.id === selected}&quot;&gt;&lt;strong&gt;${i + 1}. ${escape(a.id)} · ${escape(a.profile?.name || &#x27;Señal básica&#x27;)}&lt;/strong&gt;&lt;span&gt;${a.reviewed ? &#x27;✓ Revisada&#x27; : &#x27;⚠ Nueva&#x27;} · ${CARE[a.care]}&lt;/span&gt;&lt;span&gt;Prioridad: ${PRIORITY[a.priority]}&lt;/span&gt;&lt;span&gt;${a.receipt ? &#x27;✓ Recepción confirmada&#x27; : &#x27;⚠ Recepción pendiente&#x27;}&lt;/span&gt;&lt;span class=&quot;small&quot;&gt;Detección de prueba: ${date(a.detectedAt)} · ${a.location ? &#x27;Con coordenadas históricas&#x27; : &#x27;Sin coordenadas&#x27;}&lt;/span&gt;&lt;/button&gt;&lt;/li&gt;`).join(&#x27;&#x27;) : &#x27;&lt;li&gt;Buscando señales… No hay alertas en este filtro.&lt;/li&gt;&#x27;;
+    const map = coordinates(list); $(&#x27;map-markers&#x27;).replaceChildren(); $(&#x27;radar-markers&#x27;).replaceChildren();
+    const bounds = map.bounds;
+    $(&#x27;map-bounds&#x27;).textContent = bounds ? `Norte arriba. Latitud ${bounds.minLat.toFixed(4)} a ${bounds.maxLat.toFixed(4)}; longitud ${bounds.minLng.toFixed(4)} a ${bounds.maxLng.toFixed(4)}. Plano sin calles; ejes con escalas independientes.` : &#x27;Sin coordenadas para representar.&#x27;;
+    map.markers.forEach(m =&gt; {
+      const index = list.indexOf(m.items[0]) + 1;
+      const node = marker(m.items[0], m.items.length &gt; 1 ? `+${m.items.length}` : `${index}${{ pending: &#x27;P&#x27;, care: &#x27;E&#x27;, done: &#x27;A&#x27; }[m.items[0].care]}`, m.x, m.y);
+      if (m.items.length &gt; 1) {
+        node.setAttribute(&#x27;aria-label&#x27;, `${m.items.length} alertas agrupadas por proximidad: ${m.items.map(a =&gt; `${a.id}, ${CARE[a.care]}, ${PRIORITY[a.priority]}`).join(&#x27;; &#x27;)}. Consulta el listado.`);
+        node.addEventListener(&#x27;click&#x27;, () =&gt; { $(&#x27;map-message&#x27;).textContent = `Grupo de coordenadas cercanas: ${m.items.map(a =&gt; a.id).join(&#x27;, &#x27;)}. Cada alerta se puede abrir por separado en el listado.`; });
+      }
+      $(&#x27;map-markers&#x27;).append(node);
+    });
+    list.forEach((a, i) =&gt; { const pos = [[25, 25], [75, 25], [25, 75], [75, 75]][i]; $(&#x27;radar-markers&#x27;).append(marker(a, `${i + 1}${{ pending: &#x27;P&#x27;, care: &#x27;E&#x27;, done: &#x27;A&#x27; }[a.care]}`, pos[0], pos[1])); });
+    const noLocation = list.filter(a =&gt; !a.location).length;
+    $(&#x27;map-message&#x27;).textContent = `${noLocation} alerta(s) sin coordenadas: disponibles en el listado. Los marcadores representan capturas históricas.`;
+    $(&#x27;radar-message&#x27;).textContent = list.length ? `${list.length} señales ficticias. No existe detección Bluetooth.` : &#x27;Buscando señales… Sin alertas en el filtro actual.&#x27;;
+    renderDetail(list.find(a =&gt; a.id === selected));
+  }
+  $(&#x27;alert-list&#x27;).addEventListener(&#x27;click&#x27;, e =&gt; { const b = e.target.closest(&#x27;[data-alert]&#x27;); if (b) selectAlert(b.dataset.alert); });
+  $(&#x27;filters&#x27;).addEventListener(&#x27;click&#x27;, e =&gt; {
+    const b = e.target.closest(&#x27;[data-filter]&#x27;); if (!b) return;
+    filter = b.dataset.filter;
+    document.querySelectorAll(&#x27;[data-filter]&#x27;).forEach(item =&gt; item.setAttribute(&#x27;aria-pressed&#x27;, String(item === b)));
+    renderRescue();
+  });
+  [&#x27;map&#x27;, &#x27;radar&#x27;].forEach(type =&gt; $(`view-${type}`).addEventListener(&#x27;click&#x27;, () =&gt; {
+    [&#x27;map&#x27;, &#x27;radar&#x27;].forEach(t =&gt; { $(`${t}-view`).hidden = t !== type; $(`view-${t}`).setAttribute(&#x27;aria-pressed&#x27;, String(t === type)); });
+  }));
+  function renderDetail(a) {
+    if (!a) { $(&#x27;alert-detail&#x27;).innerHTML = &#x27;&lt;h3&gt;Detalle de alerta&lt;/h3&gt;&lt;p&gt;Selecciona un marcador o una alerta del listado para revisar sus datos y registrar una acción.&lt;/p&gt;&#x27;; return; }
+    const p = a.profile, l = a.location;
+    const block = (heading, text, kind = &#x27;&#x27;) =&gt; `&lt;section class=&quot;detail-block ${kind}&quot;&gt;&lt;h4&gt;${kind ? icon(&#x27;alert&#x27;) : &#x27;&#x27;}${heading}&lt;/h4&gt;&lt;p&gt;${escape(text)}&lt;/p&gt;&lt;/section&gt;`;
+    $(&#x27;alert-detail&#x27;).innerHTML = `&lt;h3&gt;Detalle · ${a.id}&lt;/h3&gt;&lt;p&gt;${CARE[a.care]} · Prioridad ${PRIORITY[a.priority]}&lt;/p&gt;&lt;dl&gt;&lt;dt&gt;Identificación&lt;/dt&gt;&lt;dd&gt;${escape(p?.name || &#x27;Señal básica sin perfil médico recibido&#x27;)}&lt;/dd&gt;&lt;dt&gt;Detección de prueba&lt;/dt&gt;&lt;dd&gt;${date(a.detectedAt)}&lt;/dd&gt;&lt;dt&gt;Ubicación histórica&lt;/dt&gt;&lt;dd&gt;${l ? `${l.lat.toFixed(6)}, ${l.lng.toFixed(6)} · ${date(l.at)} · ${l.source === &#x27;example&#x27; ? &#x27;Ejemplo ficticio&#x27; : &#x27;Captura GPS&#x27;}` : &#x27;Información no disponible; no se inventan coordenadas&#x27;}&lt;/dd&gt;&lt;/dl&gt;
+      ${block(&#x27;Perfil médico&#x27;, p ? `${p.age} años · Sangre: ${p.blood} · Medicación: ${p.medications || &#x27;Información no disponible&#x27;}` : &#x27;Sin perfil médico registrado o autorizado. Dato no recibido.&#x27;)}
+      ${block(&#x27;Alergias&#x27;, p ? p.noAllergies ? &#x27;Sin alergias conocidas (declarado)&#x27; : p.allergies : &#x27;Información no disponible&#x27;, p &amp;&amp; !p.noAllergies ? &#x27;critical&#x27; : &#x27;&#x27;)}
+      ${block(&#x27;Condiciones médicas y movilidad&#x27;, p ? p.noConditions ? &#x27;Sin condiciones conocidas (declarado)&#x27; : [...p.conditions, p.otherCondition].filter(Boolean).join(&#x27; · &#x27;) : &#x27;Información no disponible&#x27;)}
+      ${block(&#x27;Equipo de asistencia declarado&#x27;, p?.equipment || &#x27;Información no disponible&#x27;, p?.equipment ? &#x27;warning&#x27; : &#x27;&#x27;)}
+      ${block(&#x27;Instrucciones antes del contacto&#x27;, p ? p.noInstructions ? &#x27;No aplica (declarado)&#x27; : p.instructions || &#x27;Información no disponible&#x27; : &#x27;Información no disponible&#x27;, p?.instructions ? &#x27;warning&#x27; : &#x27;&#x27;)}
+      &lt;label for=&quot;priority-select&quot;&gt;Prioridad de atención&lt;/label&gt;&lt;select id=&quot;priority-select&quot;&gt;${Object.entries(PRIORITY).map(([key, name]) =&gt; `&lt;option value=&quot;${key}&quot; ${a.priority === key ? &#x27;selected&#x27; : &#x27;&#x27;}&gt;${name}&lt;/option&gt;`).join(&#x27;&#x27;)}&lt;/select&gt;&lt;p class=&quot;small&quot;&gt;Registro manual de prueba; no calcula una prioridad médica.&lt;/p&gt;&lt;button type=&quot;button&quot; id=&quot;save-priority&quot; class=&quot;button secondary&quot;&gt;Confirmar prioridad&lt;/button&gt;
+      ${a.receipt ? `&lt;p class=&quot;notice success&quot;&gt;${icon(&#x27;check&#x27;)}&lt;span&gt;Recepción confirmada por ${escape(a.receipt.by)} · ${date(a.receipt.at)}&lt;/span&gt;&lt;/p&gt;` : &#x27;&lt;button type=&quot;button&quot; id=&quot;confirm-receipt&quot; class=&quot;button primary&quot;&gt;Confirmar recepción&lt;/button&gt;&#x27;}
+      ${a.receipt &amp;&amp; a.care !== &#x27;done&#x27; ? `&lt;button type=&quot;button&quot; id=&quot;progress-care&quot; class=&quot;button secondary&quot;&gt;${a.care === &#x27;pending&#x27; ? &#x27;Registrar inicio de atención&#x27; : &#x27;Marcar atención finalizada&#x27;}&lt;/button&gt;` : &#x27;&#x27;}`;
+    $(&#x27;save-priority&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+      if (!canMutate()) return;
+      const priority = $(&#x27;priority-select&#x27;).value;
+      confirm(&#x27;Confirmar prioridad&#x27;, `Asignar ${PRIORITY[priority]} al caso ${a.id}. Se actualizarán el listado y la etiqueta accesible del mapa.`, () =&gt; {
+        if (!canMutate()) return; a.priority = priority; commit(`Prioridad ${PRIORITY[priority]} registrada.`); $(&#x27;priority-select&#x27;).focus();
+      }, &#x27;Guardar prioridad&#x27;);
+    });
+    $(&#x27;confirm-receipt&#x27;)?.addEventListener(&#x27;click&#x27;, () =&gt; {
+      if (!canMutate()) return;
+      if (confirmReceipt(a)) { commit(`Acuse registrado para ${a.id}; atención aún ${CARE[a.care].toLowerCase()}.`); $(&#x27;alert-detail&#x27;).focus(); }
+    });
+    $(&#x27;progress-care&#x27;)?.addEventListener(&#x27;click&#x27;, () =&gt; confirm(&#x27;Actualizar atención&#x27;, `Cambiar ${a.id} a ${a.care === &#x27;pending&#x27; ? &#x27;En atención&#x27; : &#x27;Atendida&#x27;} dentro del escenario ficticio.`, () =&gt; {
+      if (!canMutate()) return; a.care = a.care === &#x27;pending&#x27; ? &#x27;care&#x27; : &#x27;done&#x27;; commit(&#x27;Estado de atención actualizado.&#x27;); $(&#x27;alert-detail&#x27;).focus();
+    }));
+  }
+
+  // HU-41 a HU-47. Validación explícita, borrador y privacidad independientes.
+  const form = $(&#x27;profile-form&#x27;);
+  function setDirty(value) { dirty = value; updateFormState(); }
+  function updateFormState() { $(&#x27;form-state&#x27;).textContent = dirty ? &#x27;⚠ Cambios sin guardar&#x27; : !state.profile ? &#x27;Sin perfil guardado&#x27; : persisted ? &#x27;✓ Guardado localmente&#x27; : &#x27;⚠ Solo disponible en esta sesión&#x27;; }
+  function updateControls() {
+    $(&#x27;allergies&#x27;).disabled = $(&#x27;no-allergies&#x27;).checked;
+    $(&#x27;instructions&#x27;).disabled = $(&#x27;no-instructions&#x27;).checked;
+    form.querySelectorAll(&#x27;[name=&quot;conditions&quot;]&#x27;).forEach(c =&gt; { c.disabled = $(&#x27;no-conditions&#x27;).checked; });
+    $(&#x27;other-condition&#x27;).disabled = $(&#x27;no-conditions&#x27;).checked;
+    $(&#x27;instruction-count&#x27;).textContent = `${$(&#x27;instructions&#x27;).value.length} de 200 caracteres${$(&#x27;instructions&#x27;).value.length &gt; 200 ? &#x27; · Límite excedido&#x27; : &#x27;&#x27;}`;
+  }
+  function clearErrors() {
+    form.querySelectorAll(&#x27;.field-error&#x27;).forEach(el =&gt; { el.textContent = &#x27;&#x27;; });
+    form.querySelectorAll(&#x27;[aria-invalid]&#x27;).forEach(el =&gt; el.removeAttribute(&#x27;aria-invalid&#x27;));
+  }
+  function populateForm(blank = false) {
+    const p = blank ? null : state.profile;
+    const fieldMap = { name: &#x27;name&#x27;, age: &#x27;age&#x27;, blood: &#x27;blood&#x27;, medications: &#x27;medications&#x27;, allergies: &#x27;allergies&#x27;, &#x27;other-condition&#x27;: &#x27;otherCondition&#x27;, equipment: &#x27;equipment&#x27;, instructions: &#x27;instructions&#x27; };
+    Object.entries(fieldMap).forEach(([id, key]) =&gt; { $(id).value = p?.[key] ?? &#x27;&#x27;; });
+    [[&#x27;no-allergies&#x27;, &#x27;noAllergies&#x27;], [&#x27;no-conditions&#x27;, &#x27;noConditions&#x27;], [&#x27;no-instructions&#x27;, &#x27;noInstructions&#x27;], [&#x27;consent&#x27;, &#x27;consent&#x27;]].forEach(([id, key]) =&gt; { $(id).checked = Boolean(p?.[key]); });
+    form.querySelectorAll(&#x27;[name=&quot;conditions&quot;]&#x27;).forEach(c =&gt; { c.checked = Boolean(p?.conditions.includes(c.value)); });
+    updateControls(); clearErrors(); setDirty(blank); $(&#x27;form-feedback&#x27;).textContent = &#x27;&#x27;;
+  }
+  form.addEventListener(&#x27;input&#x27;, () =&gt; { setDirty(true); updateControls(); });
+  form.addEventListener(&#x27;change&#x27;, () =&gt; { setDirty(true); updateControls(); });
+  function readForm() {
+    return { name: $(&#x27;name&#x27;).value.trim(), age: $(&#x27;age&#x27;).value === &#x27;&#x27; ? NaN : Number($(&#x27;age&#x27;).value), blood: $(&#x27;blood&#x27;).value, medications: $(&#x27;medications&#x27;).value.trim(),
+      allergies: $(&#x27;no-allergies&#x27;).checked ? &#x27;&#x27; : $(&#x27;allergies&#x27;).value.trim(), noAllergies: $(&#x27;no-allergies&#x27;).checked,
+      conditions: $(&#x27;no-conditions&#x27;).checked ? [] : [...form.querySelectorAll(&#x27;[name=&quot;conditions&quot;]:checked&#x27;)].map(el =&gt; el.value), otherCondition: $(&#x27;no-conditions&#x27;).checked ? &#x27;&#x27; : $(&#x27;other-condition&#x27;).value.trim(), noConditions: $(&#x27;no-conditions&#x27;).checked,
+      equipment: $(&#x27;equipment&#x27;).value.trim(), instructions: $(&#x27;no-instructions&#x27;).checked ? &#x27;&#x27; : $(&#x27;instructions&#x27;).value.trim(), noInstructions: $(&#x27;no-instructions&#x27;).checked, consent: $(&#x27;consent&#x27;).checked, updatedAt: now() };
+  }
+  form.addEventListener(&#x27;submit&#x27;, e =&gt; {
+    e.preventDefault(); clearErrors(); const p = readForm(); let first = null;
+    const error = (id, message, control = id) =&gt; { $(`err-${id}`).textContent = `⚠ ${message}`; $(control).setAttribute(&#x27;aria-invalid&#x27;, &#x27;true&#x27;); if (!first) first = $(control); };
+    if (!p.name || p.name.length &gt; 80) error(&#x27;name&#x27;, &#x27;Escribe un nombre de 1 a 80 caracteres.&#x27;);
+    if (!Number.isInteger(p.age) || p.age &lt; 0 || p.age &gt; 120) error(&#x27;age&#x27;, &#x27;Ingresa una edad entera de 0 a 120 años.&#x27;);
+    if (!BLOOD.includes(p.blood)) error(&#x27;blood&#x27;, &#x27;Selecciona un tipo de sangre o Desconocido.&#x27;);
+    if (!p.noAllergies &amp;&amp; !p.allergies) error(&#x27;allergies&#x27;, &#x27;Especifica alergias o marca Sin alergias conocidas.&#x27;);
+    if (!p.noConditions &amp;&amp; p.conditions.length === 0 &amp;&amp; !p.otherCondition) {
+      error(&#x27;conditions&#x27;, &#x27;Selecciona condiciones, escribe otra o declara Sin condiciones conocidas.&#x27;, &#x27;condition-motor&#x27;);
+      $(&#x27;condition-motor&#x27;).setAttribute(&#x27;aria-describedby&#x27;, &#x27;err-conditions&#x27;);
+    }
+    if (!p.noInstructions &amp;&amp; $(&#x27;instructions&#x27;).value.length &gt; 200) error(&#x27;instructions&#x27;, &#x27;Reduce las instrucciones a un máximo de 200 caracteres.&#x27;);
+    if (first) { $(&#x27;form-feedback&#x27;).textContent = &#x27;⚠ Revisa los campos indicados. El perfil no se guardó.&#x27;; first.focus(); return; }
+    if (!validProfile(p)) { $(&#x27;form-feedback&#x27;).textContent = &#x27;⚠ Revisa los límites de longitud del formulario.&#x27;; return; }
+    if (!canMutate()) return;
+    saveProfile(state, p);
+    const ok = commit(&#x27;Perfil actualizado.&#x27;); setDirty(false);
+    $(&#x27;form-feedback&#x27;).textContent = ok ? `✓ Perfil guardado. ${p.consent ? &#x27;Autorizado para el rol Rescatista.&#x27; : &#x27;Sin autorización: SOS básico sin datos médicos.&#x27;}` : &#x27;⚠ Perfil actualizado solo en memoria. No se guardó; puedes reintentar.&#x27;;
+  });
+  $(&#x27;discard-edit&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; { if (!dirty) return; confirm(&#x27;Descartar cambios&#x27;, &#x27;Se recuperará la última versión del perfil de esta sesión.&#x27;, () =&gt; { populateForm(); $(&#x27;name&#x27;).focus(); }); });
+  $(&#x27;new-profile&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; confirm(&#x27;Preparar un nuevo perfil&#x27;, &#x27;Se vaciará el formulario. El perfil actual se conserva hasta que guardes uno nuevo.&#x27;, () =&gt; { populateForm(true); $(&#x27;name&#x27;).focus(); }));
+  $(&#x27;revoke-consent&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+    if (!canMutate()) return;
+    confirm(&#x27;Revocar autorización&#x27;, &#x27;El perfil médico dejará de ser visible en la alerta local. El resto del borrador se conserva. No es posible retirar información ya vista fuera de esta demostración.&#x27;, () =&gt; {
+      if (!canMutate()) return;
+      revoke(state); $(&#x27;consent&#x27;).checked = false; const ok = commit(&#x27;Autorización revocada para la alerta local.&#x27;);
+      $(&#x27;form-feedback&#x27;).textContent = ok ? &#x27;✓ Autorización revocada y guardada. Los demás cambios pendientes aún requieren guardar.&#x27; : &#x27;⚠ Revocada solo en esta sesión. Reintenta guardar antes de cerrar.&#x27;;
+    }, &#x27;Revocar ahora&#x27;);
+  });
+  window.addEventListener(&#x27;beforeunload&#x27;, e =&gt; { if (dirty || !persisted &amp;&amp; (state.profile || state.sos)) { e.preventDefault(); e.returnValue = &#x27;&#x27;; } });
+  // Evitar pérdida del borrador al salir por enlaces externos.
+  document.addEventListener(&#x27;click&#x27;, e =&gt; {
+    const link = e.target.closest(&#x27;a[href]&#x27;);
+    if (!link || !dirty || new URL(link.href).origin === location.origin) return;
+    e.preventDefault(); confirm(&#x27;Salir con cambios pendientes&#x27;, &#x27;El borrador todavía no está guardado. Puedes cancelar y guardarlo antes de abrir Figma.&#x27;, () =&gt; { setDirty(false); location.href = link.href; }, &#x27;Salir sin guardar&#x27;);
+  });
+  function resetDemo(withExamples) {
+    if (!canMutate()) return;
+    confirm(withExamples ? &#x27;Cargar casos ficticios&#x27; : &#x27;Empezar sin datos&#x27;, &#x27;Reemplaza los datos de esta demostración y descarta el borrador. Esta acción no modifica otros proyectos.&#x27;, () =&gt; {
+      if (!canMutate()) return;
+      gpsRequest++; $(&#x27;update-location&#x27;).disabled = false;
+      state = withExamples ? exampleState() : freshState(); selected = null; filter = &#x27;all&#x27;;
+      [&#x27;fail-location&#x27;, &#x27;fail-emission&#x27;].forEach(id =&gt; { $(id).checked = false; });
+      [&#x27;voice-feedback&#x27;, &#x27;location-feedback&#x27;].forEach(id =&gt; { $(id).textContent = &#x27;&#x27;; });
+      $(&#x27;voice-phrase&#x27;).value = state.voicePhrase; $(&#x27;voice-test&#x27;).value = &#x27;&#x27;;
+      document.querySelectorAll(&#x27;[data-filter]&#x27;).forEach(b =&gt; b.setAttribute(&#x27;aria-pressed&#x27;, String(b.dataset.filter === &#x27;all&#x27;)));
+      persist(); populateForm(); renderAll(); announce(withExamples ? &#x27;Casos ficticios cargados.&#x27; : &#x27;Sesión vacía preparada.&#x27;);
+    });
+  }
+  $(&#x27;load-examples&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; resetDemo(true)); $(&#x27;clear-demo&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; resetDemo(false));
+  function renderAll() { renderPersona(); renderRescue(); updateFormState(); }
+  $(&#x27;voice-phrase&#x27;).value = state.voicePhrase; populateForm(); renderAll();
+
+  // Copia offline por proyecto; la primera visita requiere HTTPS/localhost y red.
+  let offlineReady = false;
+  function connectionStatus() {
+    const network = navigator.onLine ? &#x27;El navegador informa conexión de red.&#x27; : &#x27;El navegador informa modo sin conexión.&#x27;;
+    $(&#x27;connection-status&#x27;).textContent = `${network} ${offlineReady ? &#x27;Copia de esta versión preparada para reabrir sin conexión.&#x27; : &#x27;Copia offline aún no confirmada; conserva abierta la página.&#x27;} El perfil se consulta localmente.`;
+  }
+  connectionStatus();
+  if (&#x27;serviceWorker&#x27; in navigator &amp;&amp; isSecureContext) {
+    navigator.serviceWorker.register(new URL(&#x27;sw.js&#x27;, rootURL), { scope: rootURL.pathname }).then(async registration =&gt; {
+      const ready = await navigator.serviceWorker.ready;
+      offlineReady = Boolean(ready.active); connectionStatus();
+      if (registration.waiting) $(&#x27;connection-status&#x27;).textContent += &#x27; Hay una actualización: cierra todas las pestañas de este proyecto y vuelve a abrirlo.&#x27;;
+      registration.addEventListener(&#x27;updatefound&#x27;, () =&gt; {
+        registration.installing?.addEventListener(&#x27;statechange&#x27;, () =&gt; {
+          if (registration.waiting) $(&#x27;connection-status&#x27;).textContent += &#x27; Nueva versión disponible: guarda los cambios y cierra las pestañas del proyecto para actualizar.&#x27;;
+        });
+      });
+    }).catch(() =&gt; { offlineReady = false; connectionStatus(); });
+  }
+  window.addEventListener(&#x27;online&#x27;, connectionStatus); window.addEventListener(&#x27;offline&#x27;, connectionStatus);
+})();
+</code></pre></details><details open><summary>sw.js · archivo completo</summary><pre><code>/* SeisAssist: caché de recursos cerrada, aislada por URL de proyecto. */
+const PREFIX = &#x27;seisassist:&#x27; + encodeURIComponent(self.registration.scope) + &#x27;:&#x27;;
+const CACHE = PREFIX + &#x27;c5db9e1d9d07&#x27;;
+const PATHS = [&quot;./&quot;, &quot;./assets/fonts/Inter-variable.ttf&quot;, &quot;./assets/icons/alert.svg&quot;, &quot;./assets/icons/check.svg&quot;, &quot;./assets/icons/chevron.svg&quot;, &quot;./assets/icons/logo-seisassist.svg&quot;, &quot;./assets/icons/medical.svg&quot;, &quot;./assets/icons/radar.svg&quot;, &quot;./assets/icons/shield.svg&quot;, &quot;./assets/icons/sos.svg&quot;, &quot;./assets/images/ecosistema-seisassist.svg&quot;, &quot;./css/styles.css&quot;, &quot;./favicon.ico&quot;, &quot;./index.html&quot;, &quot;./js/main.js&quot;, &quot;./pages/index.html&quot;];
+const URLS = PATHS.map(path =&gt; new URL(path, self.registration.scope).href);
+self.addEventListener(&#x27;install&#x27;, event =&gt; {
+  event.waitUntil(caches.open(CACHE).then(cache =&gt; cache.addAll(URLS.map(url =&gt; new Request(url, { cache: &#x27;reload&#x27; })))));
+  // Sin skipWaiting: una pestaña abierta conserva su versión completa.
+});
+self.addEventListener(&#x27;activate&#x27;, event =&gt; {
+  event.waitUntil(caches.keys().then(keys =&gt; Promise.all(keys.filter(key =&gt; key.startsWith(PREFIX) &amp;&amp; key !== CACHE).map(key =&gt; caches.delete(key)))).then(() =&gt; self.clients.claim()));
+});
+self.addEventListener(&#x27;fetch&#x27;, event =&gt; {
+  if (event.request.method !== &#x27;GET&#x27;) return;
+  const url = new URL(event.request.url);
+  url.search = &#x27;&#x27;; url.hash = &#x27;&#x27;;
+  if (!URLS.includes(url.href)) return;
+  event.respondWith(caches.open(CACHE).then(async cache =&gt; {
+    const cached = await cache.match(url.href);
+    return cached || fetch(event.request);
+  }));
+});
+</code></pre></details><details open><summary>index.html · archivo completo</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;es&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0;url=./pages/index.html&quot;&gt;&lt;title&gt;SeisAssist&lt;/title&gt;&lt;link rel=&quot;icon&quot; href=&quot;./favicon.ico&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;./pages/index.html&quot;&gt;Abrir SeisAssist&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</code></pre></details><details open><summary>.gitignore · archivo completo</summary><pre><code># Sistema y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+# Archivos de trabajo, dependencias y credenciales
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+*.log
+tmp/
+work/
+.env
+.env.*
+!.env.example
+~$*
+*.zip
+</code></pre></details><details open><summary>docs/README.md · archivo completo</summary><pre><code># SeisAssist · versión auditada 3.0.0
+
+Landing responsive de Nodus para HCI for UX Design. Una página HTML, una hoja CSS y un script principal, sin compilación ni dependencias de JavaScript externas.
+
+## Qué contiene
+
+Tres recorridos conectados dentro de una misma sesión de navegador: persona que necesita ayuda, equipo de rescate y cuidador. Incluye perfiles locales, validaciones, consentimiento revocable, SOS de prueba, acuse separado de atención, mapa de coordenadas, radar ilustrativo, filtros y copia offline.
+
+**No es un sistema operativo de emergencias.** Utiliza únicamente datos ficticios. No transmite Bluetooth Mesh, no detecta dispositivos, no autentica brigadistas, no realiza rescates ni sincroniza datos con otro teléfono. El control de voz es una simulación explícita por transcripción escrita; no captura audio. El GPS utiliza la API del navegador y requiere permiso. Los perfiles de prueba se guardan en localStorage, sin cifrado clínico. Cambiar de rol permite comprobar las vistas; no establece permisos de una cuenta real.
+
+La selección de 30 HU y sus pruebas están en `matriz_30_HU.csv`, `auditoria.html` y `casos_aceptacion.csv`. El catálogo de HU no se publica dentro de la landing. No se contabilizan navegación decorativa, color, reinicio de ejemplos ni acciones auxiliares como historias adicionales.
+
+## Estructura oficial
+
+```text
+assets/
+  images/ecosistema-seisassist.svg
+  icons/*.svg
+  fonts/Inter-variable.ttf
+  fonts/OFL.txt
+  videos/.gitkeep
+css/styles.css
+js/main.js
+pages/index.html            ← página principal real
+docs/README.md
+docs/auditoria.html
+docs/codigo_completo.html
+docs/matriz_30_HU.csv
+docs/casos_aceptacion.csv
+docs/pruebas-core.cjs
+docs/actualizar_cache.py
+docs/verificar_integridad.py
+docs/validacion_local.json
+docs/manifest_archivos.json
+index.html                  ← entrada que redirige a pages/index.html
+sw.js                       ← copia offline, ámbito de este proyecto
+favicon.ico
+.gitignore
+.nojekyll
+README.md
+```
+
+Las carpetas oficiales no se renombraron. `assets/videos` permanece vacía: no se utiliza vídeo. `docs/wireframes.pdf` es opcional y no se inventó. La entrada raíz es un archivo adicional; no sustituye `pages/index.html` ni implica una segunda landing.
+
+## Probar antes de subir
+
+1. Descomprime el ZIP y abre la carpeta que contiene `assets`, `css`, `js`, `pages` y `docs`.
+2. Usa un servidor local, por ejemplo la extensión Live Server de tu editor, o, si tienes Python, ejecuta desde esa carpeta: `python -m http.server 8000`.
+3. Abre `http://localhost:8000/`. Debes llegar a `pages/index.html`.
+4. La primera apertura muestra una sesión vacía. Para explorar datos ficticios abre «Escenarios de demostración» y confirma «Cargar casos ficticios».
+5. Para registrar un perfil nuevo, selecciona «Cuidador o familiar». Guarda datos ficticios. Autorizar es obligatorio solo si deseas compartir el perfil médico; sin autorización el SOS sigue disponible como señal básica.
+6. Activa SOS en «Mi espacio SOS». En «Equipo de rescate», abre `S6-LOCAL` y confirma recepción. Vuelve a los otros roles y compara los estados.
+7. «Empezar sin datos» permite repetir los casos vacíos y restablecer la prueba. Pide confirmación antes de reemplazar la sesión.
+8. Para pruebas de lógica, con Node instalado: `node docs/pruebas-core.cjs`. No se necesita Node para publicar la página.
+
+Abrir con doble clic (`file://`) permite una revisión limitada, pero no acredita Service Worker, persistencia consistente ni GPS. La verificación debe hacerse por localhost o HTTPS.
+
+## 5.5 · Crear el repositorio, paso a paso
+
+1. Entra en tu cuenta de GitHub y elige **New repository**.
+2. Escribe un nombre, por ejemplo `seisassist-landing`. Para el flujo gratuito de Pages, utiliza un repositorio público. No subas perfiles médicos ni datos personales reales.
+3. Crea el repositorio. Si añadiste un README inicial, reemplázalo después por el de este proyecto.
+4. En la página del repositorio, selecciona **Add file → Upload files**.
+5. Sube **el contenido interior** de la carpeta descomprimida. En la raíz de GitHub deben aparecer `assets`, `css`, `js`, `pages`, `docs`, `index.html`, `sw.js` y `favicon.ico`; no una carpeta contenedora extra.
+6. Comprueba también `.gitignore`, `.nojekyll` y `assets/videos/.gitkeep`. En Windows, muestra los elementos ocultos si no aparecen. Si tu método de arrastrar archivos omite alguno, usa **Add file → Create new file** y créalo con su ruta exacta; los dos últimos pueden estar vacíos.
+7. Añade un mensaje concreto, por ejemplo «Incorporar landing responsive auditada», y guarda los cambios con **Commit changes**.
+8. Abre `pages/index.html`: debe contener el HTML completo, no una redirección. La redirección está en `index.html` de la raíz.
+9. Copia la URL del repositorio en el informe, punto 5.5. Añade capturas del árbol y del historial de aportes reales. No atribuyas a cada integrante commits que no realizó.
+10. Registra la versión o identificador del commit que presentarás. No incluyas el ZIP como sustituto de los archivos fuente.
+
+## 5.6 · Publicar en GitHub Pages, paso a paso
+
+1. Abre **Settings → Pages** dentro del repositorio.
+2. En **Build and deployment**, selecciona **Deploy from a branch**.
+3. Elige la rama que contiene estos archivos, normalmente **main**, y la carpeta **/(root)**.
+4. Pulsa **Save**. No elijas `/docs`: esa carpeta contiene documentación, no la landing.
+5. Revisa la pestaña **Actions** y espera a que el despliegue de Pages finalice correctamente. Si falla, abre su registro; no marques 5.6 como cumplido.
+6. Vuelve a **Settings → Pages** y abre la URL que GitHub proporciona, normalmente `https://TU-USUARIO.github.io/seisassist-landing/`.
+7. La entrada debe redirigir a `.../seisassist-landing/pages/index.html`. También puedes abrir esta segunda dirección directamente.
+8. Ejecuta los 30 casos de `casos_aceptacion.csv` en escritorio y en un teléfono real. Conserva resultado, fecha, navegador, ancho, URL de evidencia y commit. Los resultados de Pages están pendientes en la plantilla, no aprobados por anticipado.
+9. Comprueba sin errores de carga las imágenes, Inter, estilos, JavaScript y favicon. No debe haber rutas a `C:\Users`, recursos con mayúsculas diferentes ni referencias al localhost de la auditoría.
+10. En el punto 5.6 del informe, añade la URL pública, la configuración de Pages y capturas de los tres roles en escritorio y móvil, además del resultado del despliegue.
+
+## Cambiar el proyecto después de publicarlo
+
+Sí, se puede modificar el repositorio y la página cuantas veces sea necesario. Los cambios guardados en la rama de publicación activan otra publicación.
+
+1. Edita los archivos necesarios, manteniendo sus nombres y rutas.
+2. Si modificas HTML, CSS, JS, fuentes o imágenes, ejecuta `python docs/actualizar_cache.py` desde la raíz. Actualiza la lista y la versión de la copia offline. También actualiza `docs/codigo_completo.html` para que siga correspondiendo a los archivos completos.
+3. Si no usas Python, actualiza manualmente el sufijo de `CACHE` en `sw.js` por un valor nuevo y añade a `PATHS` cada recurso nuevo. No repitas una versión de caché anterior.
+4. Sube también `sw.js`, guarda el commit y espera al nuevo despliegue de Pages.
+5. Guarda los formularios abiertos. Cierra todas las pestañas de ese proyecto y vuelve a abrirlo: la nueva copia offline se activa cuando termina de utilizarse la versión anterior. Una recarga forzada por sí sola no garantiza que cambie el Service Worker.
+6. Repite los casos afectados y actualiza las evidencias del informe. La auditoría y el manifiesto suministrados describen esta entrega; después de modificarla, vuelve a verificarlos. El script de integridad detecta diferencias, no actualiza una aprobación automáticamente.
+
+## Reglas de datos y recuperación
+
+- La clave local está aislada por la ruta del proyecto: `seisassist:v3:&lt;ruta&gt;`. Otro repositorio del mismo dominio no comparte esta copia por accidente.
+- Un SOS repetido conserva acuse y estado. Para un nuevo escenario utiliza el reinicio confirmado.
+- Un reintento conserva el paquete inicial. Revocar consentimiento siempre elimina su perfil médico. Los cambios posteriores autorizados se reflejan en una alerta ya emitida; durante un fallo se conserva la instantánea del intento.
+- El navegador puede bloquear o borrar localStorage. Se muestra «solo en esta sesión» si no guarda; no se anuncia un éxito falso.
+- Si otra pestaña modifica los mismos datos, se bloquea la siguiente escritura y se solicita recargar. No existe fusión ni sincronización remota.
+- Las fechas se almacenan como ISO y se presentan en la zona horaria del navegador. Las coordenadas de ejemplo nunca se presentan como una captura GPS real.
+- La consulta offline requiere una primera visita correcta y que el navegador conserve la caché. El indicador de red informa `navigator.onLine`; no demuestra disponibilidad de Internet ni de rescatistas.
+
+## Créditos y referencias
+
+Equipo Nodus: Alcántara Espinoza Aldair Victor; Escriba Michue Juan David; Hichcas Clemente David Daniel; Juyo Leo Rosa Enma; Palacios Salazar Jonatan Elias.
+
+- Marca, favicon e iconos base: recursos aportados en el ZIP SeisAssist. El ZIP no identificaba un autor o licencia independiente para esos recursos; el equipo debe conservar/aclarar su procedencia antes de una distribución ajena al trabajo académico. No se les atribuye una licencia inventada.
+- Inter: Rasmus Andersson / The Inter Project Authors, distribuida con SIL Open Font License 1.1. La licencia completa está en `assets/fonts/OFL.txt`. Fuente obtenida de [Google Fonts](https://github.com/google/fonts/tree/main/ofl/inter).
+- Diagrama del ecosistema y chevron: SVG de código creados para esta revisión; el diagrama resume los tres roles y no acredita una conexión física.
+- Referencias del equipo: [mockups](https://www.figma.com/design/UdaPhMkilyz6mWH6QxqBQX/Sin-t%C3%ADtulo?node-id=0-1) y [prototipo](https://www.figma.com/make/MZYoSaIhB1m2wr6RlHFd9a/Prototipo-interactivo-SeisAssist?fullscreen=1).
+- [Publicación desde una rama en GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+- [WCAG 2.2](https://www.w3.org/TR/WCAG22/). Las comprobaciones realizadas no constituyen una certificación integral de conformidad.
+
+Auditoría entregada el 21 de noviembre de 2026. Repositorio público y URL de Pages: pendientes de creación por el equipo.
+</code></pre></details></body></html>

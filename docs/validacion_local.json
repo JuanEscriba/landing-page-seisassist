@@ -1,0 +1,363 @@
+{
+  "entrega": "2026-11-21",
+  "nota_fecha": "Las fechas de eventos ficticios y las horas locales del navegador son parte de las pruebas; no acreditan una emergencia real.",
+  "source_zip_sha256": "10c3098936ccae17dbd287591d5277081a58d294161dd8f7be535f64265c16d7",
+  "pruebas_logica": {
+    "ejecutadas": 13,
+    "aprobadas": 13
+  },
+  "responsive": [
+    {
+      "width": 320,
+      "role": "persona",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 305,
+      "viewport": 320
+    },
+    {
+      "width": 320,
+      "role": "rescate",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 305,
+      "viewport": 320
+    },
+    {
+      "width": 320,
+      "role": "cuidador",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 305,
+      "viewport": 320
+    },
+    {
+      "width": 360,
+      "role": "persona",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 345,
+      "viewport": 360
+    },
+    {
+      "width": 360,
+      "role": "rescate",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 345,
+      "viewport": 360
+    },
+    {
+      "width": 360,
+      "role": "cuidador",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 345,
+      "viewport": 360
+    },
+    {
+      "width": 390,
+      "role": "persona",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 375,
+      "viewport": 390
+    },
+    {
+      "width": 390,
+      "role": "rescate",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 375,
+      "viewport": 390
+    },
+    {
+      "width": 390,
+      "role": "cuidador",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 375,
+      "viewport": 390
+    },
+    {
+      "width": 430,
+      "role": "persona",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 415,
+      "viewport": 430
+    },
+    {
+      "width": 430,
+      "role": "rescate",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 415,
+      "viewport": 430
+    },
+    {
+      "width": 430,
+      "role": "cuidador",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 415,
+      "viewport": 430
+    },
+    {
+      "width": 768,
+      "role": "persona",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 753,
+      "viewport": 768
+    },
+    {
+      "width": 768,
+      "role": "rescate",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 753,
+      "viewport": 768
+    },
+    {
+      "width": 768,
+      "role": "cuidador",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 753,
+      "viewport": 768
+    },
+    {
+      "width": 1024,
+      "role": "persona",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 1009,
+      "viewport": 1024
+    },
+    {
+      "width": 1024,
+      "role": "rescate",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 1009,
+      "viewport": 1024
+    },
+    {
+      "width": 1024,
+      "role": "cuidador",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 1009,
+      "viewport": 1024
+    },
+    {
+      "width": 1280,
+      "role": "persona",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 1265,
+      "viewport": 1280
+    },
+    {
+      "width": 1280,
+      "role": "rescate",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 1265,
+      "viewport": 1280
+    },
+    {
+      "width": 1280,
+      "role": "cuidador",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 1265,
+      "viewport": 1280
+    },
+    {
+      "width": 1440,
+      "role": "persona",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 1425,
+      "viewport": 1440
+    },
+    {
+      "width": 1440,
+      "role": "rescate",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 1425,
+      "viewport": 1440
+    },
+    {
+      "width": 1440,
+      "role": "cuidador",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 1425,
+      "viewport": 1440
+    },
+    {
+      "width": 1920,
+      "role": "persona",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 1905,
+      "viewport": 1920
+    },
+    {
+      "width": 1920,
+      "role": "rescate",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 1905,
+      "viewport": 1920
+    },
+    {
+      "width": 1920,
+      "role": "cuidador",
+      "h1": "28px",
+      "h2": "20px",
+      "h3": "16px",
+      "overflow": [],
+      "scroll": 1905,
+      "viewport": 1920
+    }
+  ],
+  "contraste": [
+    {
+      "fg": "#0F2F3F",
+      "bg": "#FFFFFF",
+      "ratio": 14.01
+    },
+    {
+      "fg": "#FFFFFF",
+      "bg": "#006B70",
+      "ratio": 6.29
+    },
+    {
+      "fg": "#FFFFFF",
+      "bg": "#004950",
+      "ratio": 10.15
+    },
+    {
+      "fg": "#FFFFFF",
+      "bg": "#B8232B",
+      "ratio": 6.34
+    },
+    {
+      "fg": "#4A5D6A",
+      "bg": "#F2F4F6",
+      "ratio": 6.21
+    },
+    {
+      "fg": "#006B70",
+      "bg": "#F2F4F6",
+      "ratio": 5.71
+    },
+    {
+      "fg": "#B8232B",
+      "bg": "#FFFFFF",
+      "ratio": 6.34
+    },
+    {
+      "fg": "#0F2F3F",
+      "bg": "#FFF4DA",
+      "ratio": 12.81
+    },
+    {
+      "fg": "#0F2F3F",
+      "bg": "#FFEFEF",
+      "ratio": 12.57
+    },
+    {
+      "fg": "#0F2F3F",
+      "bg": "#E2F2F0",
+      "ratio": 12.14
+    }
+  ],
+  "navegador": [
+    "Formulario obligatorio y foco",
+    "201 caracteres rechazados",
+    "Borrador al cambiar de rol y Escape",
+    "SOS fallo/reintento",
+    "Frase distinta/exacta",
+    "Acuse y atención separados",
+    "Prioridad con confirmación",
+    "Filtros y contadores",
+    "Consentimiento y revocación",
+    "Condiciones múltiples",
+    "GPS fallido conserva captura",
+    "Tab y Shift+Tab contenidos en diálogo; Escape restaura foco",
+    "Menú móvil y Escape",
+    "Inter cargada",
+    "Reapertura con servidor detenido y perfil persistente",
+    "Estados vacíos reales"
+  ],
+  "pendiente": [
+    "GitHub Pages y correspondencia commit remoto",
+    "Teléfono físico",
+    "Éxito GPS real y permiso real",
+    "Voz por audio",
+    "Bluetooth Mesh y detección",
+    "Autenticación y cifrado de datos reales",
+    "Lector de pantalla",
+    "Zoom real 200%/400%",
+    "Bloqueo de almacenamiento y conflicto de pestañas en navegador real"
+  ],
+  "aclaracion": "Las pruebas de 390 px son responsive en navegador, no hardware móvil."
+}

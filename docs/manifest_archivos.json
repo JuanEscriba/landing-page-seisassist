@@ -1,0 +1,162 @@
+{
+  "entrega": "2026-11-21",
+  "version": "3.0.0",
+  "nota": "Hashes de esta entrega; el propio manifiesto se excluye. No acredita publicación remota.",
+  "archivos": [
+    {
+      "archivo": ".gitignore",
+      "bytes": 222,
+      "sha256": "47a06820d9f885265587f746919a7db7bcfa347b52253c91e3cce28dc06374ec"
+    },
+    {
+      "archivo": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "assets/fonts/Inter-variable.ttf",
+      "bytes": 876576,
+      "sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031"
+    },
+    {
+      "archivo": "assets/fonts/OFL.txt",
+      "bytes": 4377,
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+    },
+    {
+      "archivo": "assets/icons/alert.svg",
+      "bytes": 366,
+      "sha256": "56b42e53894b3b4ad20c6b6c42f89519b47058be150c9398a3c5b62dd2bf486d"
+    },
+    {
+      "archivo": "assets/icons/check.svg",
+      "bytes": 260,
+      "sha256": "b9ab219b2f1eb12a69df28f3c90cda195d40208d485b3650008459be2a6dfddf"
+    },
+    {
+      "archivo": "assets/icons/chevron.svg",
+      "bytes": 207,
+      "sha256": "8a4e6a109c441988964e32983dbf692da2b151bff1d3d073730f4e448e1855a0"
+    },
+    {
+      "archivo": "assets/icons/logo-seisassist.svg",
+      "bytes": 392,
+      "sha256": "44c3a415315afd09d67a1c47ed11f02eb41d35fda61c89af3b8d342f372397c1"
+    },
+    {
+      "archivo": "assets/icons/medical.svg",
+      "bytes": 284,
+      "sha256": "010b2b09eba1a5910a896b8ca843c8aa10894dfc2ff65af0d837984b76b5214e"
+    },
+    {
+      "archivo": "assets/icons/radar.svg",
+      "bytes": 337,
+      "sha256": "aaffd0f810a4a5a2d42c03e35db06c46d3ba3ef285fbde635c4c56022f767c36"
+    },
+    {
+      "archivo": "assets/icons/shield.svg",
+      "bytes": 274,
+      "sha256": "f8ddd91a51f2294293c6e6308cbbb5cc36dd906e8524bb93479d92df6dd16f28"
+    },
+    {
+      "archivo": "assets/icons/sos.svg",
+      "bytes": 423,
+      "sha256": "3a745875e8cd5328ff752657c8e42f6cc302137616c7c6598b7763eae0e66c24"
+    },
+    {
+      "archivo": "assets/images/ecosistema-seisassist.svg",
+      "bytes": 1926,
+      "sha256": "0a4589b7be2b2e7208a7b87b51f21c59980937cafea9e86e67ef22758cbdc634"
+    },
+    {
+      "archivo": "assets/videos/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "css/styles.css",
+      "bytes": 13462,
+      "sha256": "b3a645e2afb6ddf4c768b0806c78b6bd85f53ab973bafaf175fa5cf6da1d1dd0"
+    },
+    {
+      "archivo": "docs/actualizar_cache.py",
+      "bytes": 2464,
+      "sha256": "af73561fdf949868980a804a385eb26cb2cf2d4f922e0dfc9a554474ab07d45b"
+    },
+    {
+      "archivo": "docs/auditoria.html",
+      "bytes": 35359,
+      "sha256": "24248ea1c53a64d22d125864455da4e46182e51fe9be9a0d1822d709848a649f"
+    },
+    {
+      "archivo": "docs/casos_aceptacion.csv",
+      "bytes": 9694,
+      "sha256": "4281285c5e6579568a1ada2cf068437dc7910d0f20b046df161ad28c55f2f588"
+    },
+    {
+      "archivo": "docs/codigo_completo.html",
+      "bytes": 109266,
+      "sha256": "7a2ba67181d553c3b19a35e15632199ac602377e66ce84ad183b324cb274ba34"
+    },
+    {
+      "archivo": "docs/matriz_30_HU.csv",
+      "bytes": 19408,
+      "sha256": "d6e0b16a853e9e6c34fe580f8b4a3295fda5732bb60b823274ed8c4c4a40756e"
+    },
+    {
+      "archivo": "docs/pruebas-core.cjs",
+      "bytes": 4345,
+      "sha256": "e7f85b6000179f53e7e64042ee6ca723556223603097c0b3bf596994e8ae545b"
+    },
+    {
+      "archivo": "docs/README.md",
+      "bytes": 10582,
+      "sha256": "c45e5fd5b4e572b1d94dcae7a14f11ca2a82d8254c1e876a4fc1b60f1dc25e81"
+    },
+    {
+      "archivo": "docs/trazabilidad_fuentes.csv",
+      "bytes": 54917,
+      "sha256": "62f93b6bc54c86f37553b5de5cd59c5985143c4637d2f72da314d6ca74d99158"
+    },
+    {
+      "archivo": "docs/validacion_local.json",
+      "bytes": 7578,
+      "sha256": "8d727f3b0b1d39b97acb3a4944a3ee47fa0c328582de961be2afec1cfd73b75a"
+    },
+    {
+      "archivo": "docs/verificar_integridad.py",
+      "bytes": 743,
+      "sha256": "fb62689d1790e06cb411b00e4a40c6576d832e9d936bba62bcb235baa7d1b796"
+    },
+    {
+      "archivo": "favicon.ico",
+      "bytes": 7114,
+      "sha256": "45f336f5011799e87d57033358b78b30ef0a5565a3e121c8531a5bf3b291db77"
+    },
+    {
+      "archivo": "index.html",
+      "bytes": 336,
+      "sha256": "b6c37f4867ece708a52fc10eb6fe353e72639ce1f12dcec41cf8e3a8894ec9c9"
+    },
+    {
+      "archivo": "js/main.js",
+      "bytes": 43077,
+      "sha256": "553230651a87fb1ae45ea327c2616a65dc4194145e974266ea2eaf84d164294d"
+    },
+    {
+      "archivo": "pages/index.html",
+      "bytes": 20172,
+      "sha256": "d9a49dbca61c8dd2b55a577e2108651253935c4f921e572323380f8c3ad0af6f"
+    },
+    {
+      "archivo": "README.md",
+      "bytes": 771,
+      "sha256": "4647dd0bcef663cdbce921606d2ee433ca58175da0554bbe40295223620fbd89"
+    },
+    {
+      "archivo": "sw.js",
+      "bytes": 1573,
+      "sha256": "3c2702981fc8e3f8e1470a5feacc56f0da645bae8346c39c1200e3c9e679353d"
+    }
+  ]
+}

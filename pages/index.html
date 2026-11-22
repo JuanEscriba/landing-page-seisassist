@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SeisAssist: preparación inclusiva ante sismos. Explora los recorridos locales de una persona que necesita ayuda, una brigada y su red de apoyo.">
+  <meta name="theme-color" content="#0F2F3F">
+  <title>SeisAssist · Preparación, respuesta y cuidado</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div id="live" class="sr-only" role="status" aria-atomic="true"></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio"><img src="../assets/icons/logo-seisassist.svg" width="32" height="32" alt=""><span>SeisAssist</span></a>
+      <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">Abrir menú</button>
+      <nav id="nav-menu" aria-label="Navegación principal">
+        <a href="#inicio" aria-current="location">Inicio</a><a href="#ecosistema">Cómo funciona</a><a href="#plataforma">Explorar SeisAssist</a><a href="#accesibilidad">Accesibilidad</a>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido" tabindex="-1">
+    <section id="inicio" class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">PREPARACIÓN · RESPUESTA · CUIDADO</p>
+          <h1 id="hero-title">Conexión que protege, incluso sin internet.</h1>
+          <p>Prepara información de emergencia, conoce el recorrido SOS y acompaña a quienes requieren asistencia durante un sismo.</p>
+          <p class="muted">SeisAssist propone conectar a personas con discapacidad o vulnerabilidad médica, brigadistas y redes de apoyo cuando las telecomunicaciones fallan.</p>
+          <div class="actions"><a href="#plataforma" class="button primary" data-role-jump="persona">Explorar Modo Crisis</a><a href="#ecosistema" class="button secondary">Conocer los tres roles</a></div>
+        </div>
+        <figure><img src="../assets/images/ecosistema-seisassist.svg" width="640" height="420" alt="Tres roles conectados: la persona activa el SOS, la brigada consulta y confirma, y el cuidador prepara el perfil."><figcaption>Concepto de comunicación local. En esta versión, los recorridos se conectan dentro del mismo navegador.</figcaption></figure>
+      </div>
+    </section>
+    <section id="ecosistema" class="section" aria-labelledby="ecosistema-title">
+      <div class="container">
+        <h2 id="ecosistema-title">Una red de cuidado, tres maneras de participar</h2>
+        <div class="three-grid">
+          <article class="card"><img class="icon" src="../assets/icons/sos.svg" alt=""><h3>Persona que necesita asistencia</h3><p>Prepara tu información, activa el SOS de prueba y distingue una emisión de una recepción confirmada.</p><button type="button" class="button secondary" data-role-jump="persona">Explorar mi espacio</button></article>
+          <article class="card"><img class="icon" src="../assets/icons/radar.svg" alt=""><h3>Brigadistas y equipos de rescate</h3><p>Revisa alertas, consulta los datos autorizados y registra recepción, prioridad y atención en el escenario de prueba.</p><button type="button" class="button secondary" data-role-jump="rescate">Explorar panel de rescate</button></article>
+          <article class="card"><img class="icon" src="../assets/icons/medical.svg" alt=""><h3>Familiares y redes de apoyo</h3><p>Registra un perfil ficticio, decide qué información compartir y consulta su última versión local.</p><button type="button" class="button secondary" data-role-jump="cuidador">Explorar cuidado familiar</button></article>
+        </div>
+      </div>
+    </section>
+    <section id="plataforma" class="section" aria-labelledby="plataforma-title">
+      <div class="container">
+        <h2 id="plataforma-title">Explora SeisAssist</h2>
+        <p class="notice"><img class="icon" src="../assets/icons/alert.svg" alt=""><span><strong>Demostración académica: utiliza datos ficticios.</strong> El SOS y el acuse funcionan como estados de prueba en este navegador. No transmiten Bluetooth Mesh, no detectan personas ni envían ayuda real.</span></p>
+        <p id="connection-status" class="small" role="status">Preparando la copia local…</p>
+        <p id="storage-warning" class="notice error" role="alert" hidden></p>
+        <p id="tab-conflict" class="notice warning" role="alert" hidden>Otra pestaña cambió los datos. Recarga esta página antes de guardar. Conserva una copia de tus cambios pendientes.</p>
+        <noscript><p class="notice warning">Activa JavaScript para utilizar los tres recorridos. La información de esta landing sigue disponible.</p></noscript>
+        <div class="app-shell">
+          <div class="role-tabs" role="tablist" aria-label="Seleccionar rol">
+            <button id="tab-persona" role="tab" type="button" aria-selected="true" aria-controls="panel-persona" tabindex="0">Mi espacio SOS</button>
+            <button id="tab-rescate" role="tab" type="button" aria-selected="false" aria-controls="panel-rescate" tabindex="-1">Equipo de rescate</button>
+            <button id="tab-cuidador" role="tab" type="button" aria-selected="false" aria-controls="panel-cuidador" tabindex="-1">Cuidador o familiar</button>
+          </div>
+          <div class="panels">
+            <div id="panel-persona" role="tabpanel" aria-labelledby="tab-persona" tabindex="0">
+              <div class="two-grid">
+                <article class="card crisis-card">
+                  <h3>Modo Crisis · Pide ayuda</h3>
+                  <p>Un control amplio para activar la alerta de prueba.</p>
+                  <button id="sos-activate" type="button" class="sos-button" aria-describedby="sos-help"><img class="icon" src="../assets/icons/sos.svg" alt=""><strong>SOS</strong><span id="sos-button-label">Activar SOS de prueba</span></button>
+                  <p id="sos-help" class="small">El acuse solo aparece cuando lo confirma el rol Rescatista. Repetir la activación no crea otra alerta.</p>
+                  <div id="sos-status" class="notice" role="status" aria-atomic="true"></div>
+                  <button id="sos-retry" type="button" class="button primary" hidden>Reintentar emisión</button>
+                  <details><summary>Preparar una prueba de fallo</summary><label for="fail-emission" class="check"><input id="fail-emission" type="checkbox">Provocar un fallo local en el siguiente intento</label><p class="small">El reintento utiliza el mismo paquete de datos. La retirada de consentimiento siempre elimina los datos médicos.</p></details>
+                </article>
+                <div class="stack">
+                  <article class="card"><h3>Preparación del Modo Crisis</h3><p id="readiness" class="chip"></p><ul id="diagnostic" class="clean-list"></ul><p class="small">Comprueba datos locales, no cobertura de rescate. Compartir información médica es opcional.</p></article>
+                  <article class="card"><h3>Última ubicación registrada</h3><p class="small">Captura histórica, sin seguimiento en tiempo real. Los ejemplos se identifican expresamente.</p><dl id="location-data"></dl><button id="update-location" type="button" class="button secondary">Actualizar ubicación con GPS</button><p id="location-feedback" role="status"></p><details><summary>Opciones de prueba de ubicación</summary><label for="fail-location" class="check"><input id="fail-location" type="checkbox">Simular fallo sin solicitar GPS</label><button id="example-location" type="button" class="button secondary">Usar coordenadas de ejemplo</button></details></article>
+                </div>
+              </div>
+              <div class="two-grid">
+                <article class="card"><h3>Comando SOS</h3><p>Prueba por texto de la frase que reconocería el sistema de voz. Esta versión no captura audio.</p><form id="voice-form" novalidate><label for="voice-phrase">Frase configurada (1 a 80 caracteres)</label><input id="voice-phrase" maxlength="80" required aria-describedby="voice-feedback"><button class="button secondary" type="submit">Guardar frase</button></form><label for="voice-test">Transcripción de prueba</label><input id="voice-test" maxlength="80" aria-describedby="voice-feedback"><button id="test-voice" class="button primary" type="button">Probar comando</button><p id="voice-feedback" role="status"></p></article>
+                <article class="card"><h3>Mi información de emergencia</h3><p class="small">Consulta local disponible sin solicitar datos a una nube.</p><details open><summary>Consultar perfil local</summary><div id="persona-profile"></div></details><button class="button secondary" type="button" data-role-jump="cuidador">Registrar o editar perfil</button></article>
+              </div>
+            </div>
+            <div id="panel-rescate" role="tabpanel" aria-labelledby="tab-rescate" tabindex="0" hidden>
+              <article class="card"><h3>Panel táctico de demostración</h3><p>Responsable de prueba: <strong>Brigadista Demo · B-12</strong>. Cambiar de rol no autentica a una persona.</p><div id="filters" class="actions" role="group" aria-label="Filtrar por estado de atención"><button class="button secondary" type="button" data-filter="all" aria-pressed="true">Todas <span id="count-all">0</span></button><button class="button secondary" type="button" data-filter="pending" aria-pressed="false">Pendientes <span id="count-pending">0</span></button><button class="button secondary" type="button" data-filter="care" aria-pressed="false">En atención <span id="count-care">0</span></button><button class="button secondary" type="button" data-filter="done" aria-pressed="false">Atendidas <span id="count-done">0</span></button></div><p id="filter-result" role="status"></p></article>
+              <div class="two-grid tactical-grid">
+                <div class="stack">
+                  <article class="card"><h3>Mapa y radar de prueba</h3><div class="actions" role="group" aria-label="Tipo de visualización"><button id="view-map" class="button secondary" type="button" aria-pressed="true" aria-controls="map-view">Mapa de coordenadas</button><button id="view-radar" class="button secondary" type="button" aria-pressed="false" aria-controls="radar-view">Radar de ejemplo</button></div><p class="small">Selecciona un marcador o utiliza el listado equivalente. P = pendiente; E = en atención; A = atendida.</p><div id="map-view"><p id="map-bounds" class="small"></p><div id="map-canvas" class="map-canvas" role="group" aria-label="Mapa esquemático por coordenadas"><span class="north" aria-hidden="true">N</span><div id="map-markers"></div></div><p id="map-message"></p></div><div id="radar-view" hidden><p class="small">Distribución ilustrativa: no mide distancia, dirección ni intensidad Bluetooth.</p><div class="radar-canvas" role="group" aria-label="Radar ilustrativo"><div id="radar-markers"></div></div><p id="radar-message"></p></div></article>
+                  <article class="card"><h3>Alertas recibidas en la demostración</h3><ul id="alert-list" class="clean-list"></ul></article>
+                </div>
+                <article id="alert-detail" class="card" tabindex="-1" aria-label="Detalle de alerta"></article>
+              </div>
+            </div>
+            <div id="panel-cuidador" role="tabpanel" aria-labelledby="tab-cuidador" tabindex="0" hidden>
+              <div class="two-grid">
+                <article class="card">
+                  <h3>Perfil preventivo del familiar</h3><p id="form-state" class="chip">Sin perfil guardado</p><p class="small">Usa datos ficticios. Los campos marcados «obligatorio» requieren una respuesta. «Desconocido» no equivale a «ninguno».</p>
+                  <form id="profile-form" novalidate>
+                    <label for="name">Nombre del familiar (obligatorio)</label><input id="name" name="name" maxlength="80" required autocomplete="off" aria-describedby="err-name"><p id="err-name" class="field-error"></p>
+                    <div class="form-grid"><div><label for="age">Edad en años (obligatorio)</label><input id="age" name="age" type="number" min="0" max="120" step="1" required inputmode="numeric" aria-describedby="err-age"><p id="err-age" class="field-error"></p></div><div><label for="blood">Tipo de sangre (obligatorio)</label><select id="blood" name="blood" required aria-describedby="err-blood"><option value="">Selecciona</option><option>Desconocido</option><option>O+</option><option>O-</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option></select><p id="err-blood" class="field-error"></p></div></div>
+                    <label for="medications">Medicación declarada (opcional)</label><input id="medications" name="medications" maxlength="200" autocomplete="off"><p class="small">Vacío se muestra como «Información no disponible».</p>
+                    <fieldset class="critical-field"><legend>Alergias · dato crítico (obligatorio)</legend><label for="allergies">Alergias conocidas</label><input id="allergies" name="allergies" maxlength="200" aria-describedby="err-allergies"><label class="check" for="no-allergies"><input id="no-allergies" type="checkbox">Sin alergias conocidas</label><p id="err-allergies" class="field-error"></p></fieldset>
+                    <fieldset id="conditions-field" aria-describedby="err-conditions"><legend>Condiciones y movilidad (obligatorio)</legend><p class="small">Puedes combinar varias condiciones o declarar que ninguna es conocida.</p><div class="check-grid">
+                      <label class="check" for="condition-motor"><input id="condition-motor" name="conditions" type="checkbox" value="Movilidad reducida">Movilidad reducida</label>
+                      <label class="check" for="condition-hearing"><input id="condition-hearing" name="conditions" type="checkbox" value="Discapacidad auditiva">Discapacidad auditiva</label>
+                      <label class="check" for="condition-visual"><input id="condition-visual" name="conditions" type="checkbox" value="Discapacidad visual">Discapacidad visual</label>
+                      <label class="check" for="condition-sensory"><input id="condition-sensory" name="conditions" type="checkbox" value="Sensibilidad sensorial">Sensibilidad sensorial</label>
+                      <label class="check" for="condition-cognitive"><input id="condition-cognitive" name="conditions" type="checkbox" value="Discapacidad cognitiva">Discapacidad cognitiva</label>
+                      <label class="check" for="condition-chronic"><input id="condition-chronic" name="conditions" type="checkbox" value="Condición crónica">Condición crónica</label>
+                    </div><label for="other-condition">Otra condición (opcional)</label><input id="other-condition" maxlength="100"><label class="check" for="no-conditions"><input id="no-conditions" type="checkbox">Sin condiciones conocidas</label><p id="err-conditions" class="field-error"></p></fieldset>
+                    <label for="equipment">Equipo de asistencia declarado (opcional)</label><input id="equipment" maxlength="120" placeholder="Ejemplo ficticio: silla de ruedas"><p class="small">Se resalta lo declarado. El sistema no deduce necesidades clínicas.</p>
+                    <fieldset><legend>Indicaciones antes del contacto</legend><label for="instructions">Instrucciones especiales (máximo 200 caracteres)</label><textarea id="instructions" rows="3" aria-describedby="instruction-count err-instructions"></textarea><p id="instruction-count" class="small">0 de 200 caracteres</p><label class="check" for="no-instructions"><input id="no-instructions" type="checkbox">No aplica</label><p id="err-instructions" class="field-error"></p></fieldset>
+                    <fieldset><legend>Autorización de información</legend><label class="check" for="consent"><input id="consent" type="checkbox" aria-describedby="consent-help">Autorizo mostrar este perfil ficticio al rol Rescatista</label><p id="consent-help" class="small">Es obligatorio autorizar para compartir datos médicos. Puedes guardar sin autorizar: el SOS mostrará solo identificador y ubicación disponible. Desmarca y guarda para retirar la autorización, o utiliza «Revocar autorización ahora».</p><button id="revoke-consent" class="button secondary" type="button">Revocar autorización ahora</button></fieldset>
+                    <div class="actions"><button type="submit" class="button primary">Guardar perfil</button><button id="discard-edit" type="button" class="button secondary">Descartar cambios</button><button id="new-profile" type="button" class="button secondary">Nuevo perfil</button></div><p id="form-feedback" role="status"></p>
+                  </form>
+                </article>
+                <div class="stack"><article class="card"><h3>Estado SOS del familiar</h3><div id="family-status" class="notice" role="status" aria-atomic="true"></div><p class="small">Último evento local de prueba; no es seguimiento remoto.</p><button type="button" class="button secondary" data-role-jump="persona">Consultar Modo Crisis</button></article><article class="card"><h3>Perfil disponible localmente</h3><p class="small">Sin consultas a una nube de perfiles.</p><div id="family-profile"></div></article></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <details class="test-options"><summary>Escenarios de demostración</summary><p>Estas acciones requieren confirmación. Reinician los estados y reemplazan los datos ficticios de esta demostración.</p><div class="actions"><button id="load-examples" type="button" class="button secondary">Cargar casos ficticios</button><button id="clear-demo" type="button" class="button secondary">Empezar sin datos</button></div><p class="small">La configuración vacía permite probar «sin perfil», «sin ubicación» y «buscando señales».</p></details>
+      </div>
+    </section>
+    <section id="accesibilidad" class="section" aria-labelledby="access-title"><div class="container"><h2 id="access-title">Controles claros, distintos modos de participar</h2><div class="three-grid"><article><h3>Teclado y controles táctiles</h3><p>Utiliza Tab para recorrer las acciones. En los roles, usa flechas, Inicio y Fin; Enter o Espacio activa el rol. Escape cierra menús y confirmaciones.</p></article><article><h3>Estados comprensibles</h3><p>Los avisos combinan iconos, texto y color. «En emisión» y «Recepción confirmada» representan eventos diferentes.</p></article><article><h3>Datos siempre identificados</h3><p>Las ausencias de información se muestran explícitamente. La última ubicación incluye su fecha y el origen de la captura.</p></article></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container"><h2>SeisAssist · Equipo Nodus</h2><p>Proyecto académico de HCI for UX Design · UPC · 2026-20.</p><p class="small">Alcántara Espinoza Aldair Victor · Escriba Michue Juan David · Hichcas Clemente David Daniel · Juyo Leo Rosa Enma · Palacios Salazar Jonatan Elias.</p><p><a href="https://www.figma.com/design/UdaPhMkilyz6mWH6QxqBQX/Sin-t%C3%ADtulo?node-id=0-1">Consultar mockups</a> · <a href="https://www.figma.com/make/MZYoSaIhB1m2wr6RlHFd9a/Prototipo-interactivo-SeisAssist?fullscreen=1">Consultar prototipo interactivo</a></p><p class="small">Versión auditada <span id="build-id">3.0.0</span> · Datos de prueba locales.</p></div></footer>
+  <dialog id="confirm-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description"><form method="dialog"><h2 id="dialog-title">Confirmar acción</h2><p id="dialog-description"></p><div class="actions"><button id="dialog-cancel" value="cancel" class="button secondary" autofocus>Cancelar</button><button id="dialog-confirm" value="confirm" class="button primary">Confirmar</button></div></form></dialog>
+</body>
+</html>

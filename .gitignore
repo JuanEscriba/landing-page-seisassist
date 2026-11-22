@@ -1,0 +1,21 @@
+# Sistema y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+# Archivos de trabajo, dependencias y credenciales
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+*.log
+tmp/
+work/
+.env
+.env.*
+!.env.example
+~$*
+*.zip
